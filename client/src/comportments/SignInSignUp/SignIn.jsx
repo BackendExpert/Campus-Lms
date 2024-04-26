@@ -40,8 +40,8 @@ const SignIn = () => {
                 }
                 else{
                     //get and store login user role and email
-                    const userRole = res.data.LoginUser[0].Role;
-                    const userEmail = res.data.LoginUser[0].Email;
+                    const userRole = res.data.LoginUser[0].role;
+                    const userEmail = res.data.LoginUser[0].email;
 
                     //store data in localstore so that use secureLocalStorage
                     secureLocalStorage.setItem("Login1", userRole);

@@ -93,7 +93,7 @@ app.post('/EmailSubscribe', (req, res) => {
 app.post('/SignUp', (req, res) => {
     console.log(req.body)
 
-    const checkSql = "SELECT * FROM users WHERE Email = ?"
+    const checkSql = "SELECT * FROM users WHERE email = ?"
     connection.query(checkSql, [req.body.email], (err, result) => {
         if(err) throw err
 
@@ -112,12 +112,13 @@ app.post('/SignUp', (req, res) => {
                     create_at,
                     role,
                     is_active,
-                    hashPass,             
+                    hashPass             
                 ]
 
                 connection.query(sql, [values], (err, result) => {
                     if(err) {
                         return res.json({Error: "Error on Server1111"})
+                        // console.log(err)
                     }
                     else{
                         return res.json({Status: "Success"})

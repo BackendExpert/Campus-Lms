@@ -66,12 +66,10 @@ app.post('/EmailSubscribe', (req, res) => {
         if(err) throw err
         
         if(result.length === 0){
-            const sql = "INSERT INTO email_subscribe(Email, join_at) VALUES (?)";            
-            const create_at = new Date()
+            const sql = "INSERT INTO email_subscribe(email) VALUES (?)";            
 
             const values = [
                 req.body.email,
-                create_at
             ]            
 
             connection.query(sql, [values], (err, result) => {
@@ -108,7 +106,7 @@ app.post('/SignUp', (req, res) => {
                 const is_lock = 0
                 const create_at = new Date
 
-                const sql = "INSERT INTO users(username, Email, Password, Role, is_active, is_lock, create_at) VALUES (?)"
+                const sql = "INSERT INTO users(username, email, Password, userscol, is_active, is_lock, create_at) VALUES (?)"
                 const values = [    
                     req.body.username,
                     req.body.email,

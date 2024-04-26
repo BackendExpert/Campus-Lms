@@ -33,12 +33,7 @@ const SignIn = () => {
             //login to system
 
             if(res.data.Msg === "Success"){
-                if(res.data.LoginUser[0].is_active === 0 && res.data.LoginUser[0].is_lock === 1){
-                    alert('Your Account has been locked. Unauthorized activity has been detected.')
-                    localStorage.clear()
-                    navigate('/')
-                }
-                else if(res.data.LoginUser[0].is_active === 0){
+                if(res.data.LoginUser[0].is_active === 0){
                     alert('Your Account has been Deactive by Administration.')
                     localStorage.clear()
                     navigate('/')

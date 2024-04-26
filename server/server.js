@@ -169,7 +169,18 @@ app.post('/SignIn', (req, res) => {
 
 // Add new Book
 app.post('/AddBook', (req, res) => {
-    console.log(req.body)
+    // console.log(req.body)
+    const checkSql = "SELECT * FROM books WHERE ISBN_No = ?"
+    connection.query(checkSql, [req.body.isbnNo], (err, result) => {
+        if(err) throw err
+
+        if(result.length === 0){
+
+        }
+        else{
+            return res.json({Error: "The ISBN Number Already have another book"})
+        }
+    })
 })
 
 // all end points end

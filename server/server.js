@@ -38,7 +38,7 @@ const connection = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "1234",
-    database: "db_lms"
+    database: "project_lms"
 })
 //email Sending - Nodemailer transporter
 

@@ -167,6 +167,11 @@ app.post('/SignIn', (req, res) => {
     })
 })
 
+// Add new Book
+app.post('/AddBook', (req, res) => {
+    console.log(req.body)
+})
+
 // all end points end
 
 //check the server is working

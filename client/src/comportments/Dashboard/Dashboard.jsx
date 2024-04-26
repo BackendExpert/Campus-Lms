@@ -30,8 +30,9 @@ const Dashboard = () => {
         {id: 1, name: "Books", link: "#", icon: <Icons name="book" size="large"></Icons>, btnValue: "Books"},
         {id: 2, name: "Borrowed Books", link: "#", icon: <Icons name="book" size="large"></Icons>, btnValue: "Borrowed Books"},
         {id: 3, name: "Users", link: "#", icon: <Icons name="people" size="large"></Icons>, btnValue: "Users"},
-        {id: 4, name: "My Borrowed", link: "#", icon: <Icons name="book" size="large"></Icons>, btnValue: "Profile"},
-        {id: 5, name: "Profile", link: "#", icon: <Icons name="person" size="large"></Icons>, btnValue: "Profile"},        
+        {id: 4, name: "My Borrowed", link: "#", icon: <Icons name="book" size="large"></Icons>, btnValue: "My Borrowed"},
+        {id: 5, name: "All Books", link: "#", icon: <Icons name="books" size="large"></Icons>, btnValue: "All Books"},        
+        {id: 6, name: "Profile", link: "#", icon: <Icons name="person" size="large"></Icons>, btnValue: "Profile"},        
     ]
 
     const navBar = [

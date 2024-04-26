@@ -4,6 +4,8 @@ import { Link, useNavigate } from "react-router-dom"
 import  secureLocalStorage  from  "react-secure-storage"
 import CountUp from 'react-countup';
 import AddBook from "./AddBook";
+import axios from "axios";
+
 
 const Books = () => {
     const navigate = useNavigate() 
@@ -21,7 +23,7 @@ const Books = () => {
         const fetchData = async () => {
             try {
                 const BKCount = await axios.get('http://localhost:8081/BooksCount');
-                SetCoutBooks(BKCount.data.CountBK);
+                SetCoutBooks(BKCount.data.BKs);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }

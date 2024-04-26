@@ -97,7 +97,7 @@ const SignIn = () => {
                 </div>
             </div>
             <div className="my-1 text-center">
-                &copy; Developed and Design by : National Institute of Fundamental Studies
+                &copy; Developed and Design by : JehanKandy
             </div>
         </div>
     </div>

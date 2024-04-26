@@ -40,23 +40,28 @@ const AddBook = () => {
                         <div className="lg:grid grid-cols-3 gap-4">
                             <div className="my-2">
                                 <label htmlFor="" className="text-gray-500">ISBN Number : </label>
-                                <input type="text" name="" id="" required className="w-full border border-blue-500 h-12 rounded shadow-md my-2 pl-2" placeholder="Book ISBN Number"/>
+                                <input type="text" name="" id="" required className="w-full border border-blue-500 h-12 rounded shadow-md my-2 pl-2" placeholder="Book ISBN Number"
+                                onChange={e => SetBookData({...BookData, isbnNo:e.target.value})}/>
                             </div>
                             <div className="my-2">
                                 <label htmlFor="" className="text-gray-500">Book Name : </label>
-                                <input type="text" name="" id="" required className="w-full border border-blue-500 h-12 rounded shadow-md my-2 pl-2" placeholder="Book Name"/>
+                                <input type="text" name="" id="" required className="w-full border border-blue-500 h-12 rounded shadow-md my-2 pl-2" placeholder="Book Name" 
+                                onChange={e => SetBookData({...BookData, bname:e.target.value})}/>
                             </div>
                             <div className="my-2">
                                 <label htmlFor="" className="text-gray-500">Book Author 1 : </label>
-                                <input type="text" name="" id="" required className="w-full border border-blue-500 h-12 rounded shadow-md my-2 pl-2" placeholder="Book Author 1"/>
+                                <input type="text" name="" id="" required className="w-full border border-blue-500 h-12 rounded shadow-md my-2 pl-2" placeholder="Book Author 1" 
+                                onChange={e => SetBookData({...BookData, author1:e.target.value})}/>
                             </div>
                             <div className="my-2">
                                 <label htmlFor="" className="text-gray-500">Book Author 2 : </label>
-                                <input type="text" name="" id="" required className="w-full border border-blue-500 h-12 rounded shadow-md my-2 pl-2" placeholder="Book Author 2"/>
+                                <input type="text" name="" id="" required className="w-full border border-blue-500 h-12 rounded shadow-md my-2 pl-2" placeholder="Book Author 2" 
+                                onChange={e => SetBookData({...BookData, author2:e.target.value})}/>
                             </div>
                             <div className="my-2">
                                 <label htmlFor="" className="text-gray-500">Book Author 3 : </label>
-                                <input type="text" name="" id="" required className="w-full border border-blue-500 h-12 rounded shadow-md my-2 pl-2" placeholder="Book Author 3"/>
+                                <input type="text" name="" id="" required className="w-full border border-blue-500 h-12 rounded shadow-md my-2 pl-2" placeholder="Book Author 3" 
+                                onChange={e => SetBookData({...BookData, author3:e.target.value})}/>
                             </div>
                         </div>
                         <div className="my-2">

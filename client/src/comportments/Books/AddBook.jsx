@@ -15,10 +15,10 @@ const AddBook = () => {
                 <h1 className="font-semibold text-gray-500 text-xl">Add New Book</h1>
                 <div className="my-4">
                     <form>
-                        <div className="lg:grid grid-cols-3">
+                        <div className="lg:grid grid-cols-3 gap-4">
                             <div className="my-2">
-                                <label htmlFor="">ISBN Number : </label>
-                                <input type="text" name="" id="" required className="w-full border border-blue-500 h-12 rounded shadow-md"/>
+                                <label htmlFor="" className="text-gray-500">ISBN Number : </label>
+                                <input type="text" name="" id="" required className="w-full border border-blue-500 h-12 rounded shadow-md my-2 pl-2" placeholder="Book ISBN Number"/>
                             </div>
                         </div>
                     </form>

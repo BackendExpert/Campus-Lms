@@ -94,7 +94,7 @@ const Dashboard = () => {
                                     )
                                 }
                                 if(RoleUser === "user"){
-                                    if(sidem.id === 1 || sidem.id === 2 || sidem.id === 3 || sidem.id === 4){
+                                    if(sidem.id === 1 || sidem.id === 4 || sidem.id === 5){
                                         return (
                                             <Link to={sidem.link}>
                                                 <div onClick={() => HeadleButtonClick(sidem.btnValue)} className="flex py-2 text-gray-400 duration-500 hover:text-[#3B71CA]">                        

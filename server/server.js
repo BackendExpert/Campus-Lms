@@ -105,14 +105,14 @@ app.post('/SignUp', (req, res) => {
                 const is_active = 1
                 const create_at = new Date
 
-                const sql = "INSERT INTO users(username, email, password, role, is_active, create_at) VALUES (?)"
+                const sql = "INSERT INTO users(username, email, create_at, role, is_active, password) VALUES (?)"
                 const values = [    
                     req.body.username,
                     req.body.email,
-                    hashPass,
+                    create_at,
                     role,
                     is_active,
-                    create_at
+                    hashPass,             
                 ]
 
                 connection.query(sql, [values], (err, result) => {

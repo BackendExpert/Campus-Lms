@@ -175,7 +175,8 @@ app.post('/AddBook', (req, res) => {
         if(err) throw err
 
         if(result.length === 0){
-
+            const sql = "INSERT INTO books(ISBN_No, Name, author1, author2, author3, status, create_at) VALUES (?)";
+            const status = ""
         }
         else{
             return res.json({Error: "The ISBN Number Already have another book"})

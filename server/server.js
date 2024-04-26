@@ -176,7 +176,27 @@ app.post('/AddBook', (req, res) => {
 
         if(result.length === 0){
             const sql = "INSERT INTO books(ISBN_No, Name, author1, author2, author3, status, create_at) VALUES (?)";
-            const status = ""
+            const status = "Available"
+            const create_at = new Date()
+
+            const values = [
+                req.body.isbnNo,
+                req.body.bname,
+                req.body.author1,
+                req.body.author2,
+                req.body.author3,               
+                status,
+                create_at
+            ]
+
+            connection.query(sql, [values], (err, result) => {
+                if(err) {
+                    return res.json({Error: "Error on Server"})
+                }
+                else{
+                    return res.json({Status: "Success"})
+                }
+            })
         }
         else{
             return res.json({Error: "The ISBN Number Already have another book"})

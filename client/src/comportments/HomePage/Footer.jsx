@@ -5,7 +5,7 @@ import axios from 'axios'
 const Footer = () => {
     const footerData = [
         // for our services
-        {name: "History", link: "/History"},
+        {name: "History", link: "#"},
         {name: "Gallery", link: "#"},
         {name: "Events", link: "#"},
         {name: "Friends", link: "#"},
@@ -63,7 +63,7 @@ const Footer = () => {
                 <h1 className="text-xl font-semibold font-semibold text-gray-500 my-4 ">Contact</h1>
                 <p className="my-5">lib@123.com</p>   
                 <p className="my-5">+94 XXXXXXXXX</p>  
-                <p className="my-5">Hanthana Road, kandy, Sri Lanka</p> 
+                <p className="my-5">ABC Street, XTS</p> 
 
                 <h1 className='mt-8 font-semibold'></h1>
                 <div className="flex">

@@ -170,8 +170,10 @@ const Dashboard = () => {
         )
     }
     else{
-        localStorage.clear()
-        navigate('/')
+        useEffect(() => {
+            localStorage.clear()
+            navigate('/')
+        }, [])
     }
 
 }

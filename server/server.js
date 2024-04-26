@@ -143,13 +143,13 @@ app.post('/SignIn', (req, res) => {
 
         if(result.length > 0){
             const password = req.body.password;
-            bcrypt.compare(password, result[0].Password, (err, passMatch) => {
+            bcrypt.compare(password, result[0].password, (err, passMatch) => {
                 if(err) throw err
 
                 if(passMatch){
                     //generate JWT Token
                     const token = jwt.sign(
-                        {email: result[0].email, role: result[0].role, is_active: result[0].is_active, is_lock: result[0].is_lock},
+                        {email: result[0].email, role: result[0].role, is_active: result[0].is_active},
                         'your-secret-key',
                         {expiresIn: '1h'}
                     );

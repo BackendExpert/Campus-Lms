@@ -118,7 +118,7 @@ app.post('/SignUp', (req, res) => {
 
                 connection.query(sql, [values], (err, result) => {
                     if(err) {
-                        return res.json({Error: "Error on Server"})
+                        return res.json({Error: "Error on Server1111"})
                     }
                     else{
                         return res.json({Status: "Success"})

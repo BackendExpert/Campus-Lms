@@ -19,8 +19,8 @@ const Books = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const leaveMy = await axios.get('http://localhost:8081/CountMyLeavs/' + EmailUser);
-                SetmyLeaves(leaveMy.data.le);
+                const BKCount = await axios.get('http://localhost:8081/CountBooks');
+                SetmyLeaves(BKCount.data.CountBK);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }

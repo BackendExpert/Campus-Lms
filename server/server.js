@@ -137,7 +137,7 @@ app.post('/SignUp', (req, res) => {
 app.post('/SignIn', (req, res) => {
     // console.log(req.body)
 
-    const sql = "SELECT * FROM users WHERE Email = ?"
+    const sql = "SELECT * FROM users WHERE email = ?"
     connection.query(sql, [req.body.email], (err, result) => {
         if(err) throw err
 

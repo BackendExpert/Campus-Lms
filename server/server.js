@@ -91,7 +91,7 @@ app.post('/EmailSubscribe', (req, res) => {
 // SignUp endPoint
 
 app.post('/SignUp', (req, res) => {
-    // console.log(req.body)
+    console.log(req.body)
 
     const checkSql = "SELECT * FROM users WHERE Email = ?"
     connection.query(checkSql, [req.body.email], (err, result) => {

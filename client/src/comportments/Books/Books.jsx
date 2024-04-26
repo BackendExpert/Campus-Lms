@@ -16,6 +16,19 @@ const Books = () => {
         SetButtonValue(clickValue)   
     }
 
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const leaveMy = await axios.get('http://localhost:8081/CountMyLeavs/' + EmailUser);
+                SetmyLeaves(leaveMy.data.le);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+
+        }
+        fetchData();
+    }, [])
+
     const BookData = [
         {id: 1, btnValue: "Books", name: "Books", value: <CountUp end={20}/>, icon: <Icons name="book" size="large"></Icons>, style: 'text-green-500'},
         {id: 2, btnValue: "bkBorrow", name: "Books Borrowed", value: <CountUp end={20}/>, icon: <Icons name="book" size="large"></Icons>, style: 'text-red-500'},

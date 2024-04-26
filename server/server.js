@@ -135,7 +135,7 @@ app.post('/SignUp', (req, res) => {
 // end point for SignIn
 
 app.post('/SignIn', (req, res) => {
-    // console.log(req.body)
+    console.log(req.body)
 
     const sql = "SELECT * FROM users WHERE email = ?"
     connection.query(sql, [req.body.email], (err, result) => {

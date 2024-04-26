@@ -20,6 +20,22 @@ const AddBook = () => {
                                 <label htmlFor="" className="text-gray-500">ISBN Number : </label>
                                 <input type="text" name="" id="" required className="w-full border border-blue-500 h-12 rounded shadow-md my-2 pl-2" placeholder="Book ISBN Number"/>
                             </div>
+                            <div className="my-2">
+                                <label htmlFor="" className="text-gray-500">Book Name : </label>
+                                <input type="text" name="" id="" required className="w-full border border-blue-500 h-12 rounded shadow-md my-2 pl-2" placeholder="Book Name"/>
+                            </div>
+                            <div className="my-2">
+                                <label htmlFor="" className="text-gray-500">Book Author 1 : </label>
+                                <input type="text" name="" id="" required className="w-full border border-blue-500 h-12 rounded shadow-md my-2 pl-2" placeholder="Book Author 1"/>
+                            </div>
+                            <div className="my-2">
+                                <label htmlFor="" className="text-gray-500">Book Author 2 : </label>
+                                <input type="text" name="" id="" required className="w-full border border-blue-500 h-12 rounded shadow-md my-2 pl-2" placeholder="Book Author 2"/>
+                            </div>
+                            <div className="my-2">
+                                <label htmlFor="" className="text-gray-500">Book Author 3 : </label>
+                                <input type="text" name="" id="" required className="w-full border border-blue-500 h-12 rounded shadow-md my-2 pl-2" placeholder="Book Author 3"/>
+                            </div>
                         </div>
                     </form>
                 </div>

@@ -103,7 +103,6 @@ app.post('/SignUp', (req, res) => {
 
                 const role = "user"
                 const is_active = 1
-                const is_lock = 0
                 const create_at = new Date
 
                 const sql = "INSERT INTO users(username, email, password, role, is_active, create_at) VALUES (?)"

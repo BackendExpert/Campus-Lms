@@ -132,6 +132,12 @@ app.post('/SignUp', (req, res) => {
     })
 })
 
+// count all books
+
+app.get('/BooksCount', (req, res) => {
+    
+})
+
 // end point for SignIn
 
 app.post('/SignIn', (req, res) => {

@@ -41,7 +41,7 @@ const Books = () => {
             
             try {
                 const SelectedBKCount = await axios.get('http://localhost:8081/SelectedBooksCount');
-                SetCountSelectedBooks(SelectedBKCount.data.BorrowBks);
+                SetCountSelectedBooks(SelectedBKCount.data.SeletedBks);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }

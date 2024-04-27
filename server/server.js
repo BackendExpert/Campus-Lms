@@ -239,7 +239,7 @@ app.get('/AllBooks', (req, res) => {
 
 // count borrowed book
 
-app.get('/CountBorrowBooks', (req, res) => {
+app.get('/BorrowBooksCount', (req, res) => {
     const sql = "SELECT COUNT(ID) AS BorrowBks FROM books WHERE status = ?";
     const status = "Borrow"
   

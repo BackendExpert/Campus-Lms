@@ -254,6 +254,23 @@ app.get('/BorrowBooksCount', (req, res) => {
     });
 })
 
+// count seleted books
+
+app.get('/SelectedBooksCount', (req, res) => {
+    const sql = "SELECT COUNT(ID) AS SeletedBks FROM books WHERE status = ?";
+    const status = "Selected"
+  
+    connection.query(sql, [status], (error, results) => {
+      if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+      }
+  
+      res.json({ SeletedBks: results[0].SeletedBks }); // Send count in JSON format
+    });
+})
+
 // all end points end
 
 //check the server is working

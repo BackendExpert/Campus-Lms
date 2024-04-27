@@ -67,12 +67,12 @@ const AllBooks = () => {
                                                     }
                                                     else if(books.status === "Borrow"){
                                                         return (
-                                                            <p className="text-green-500 font-semibold">Borrowed</p>
+                                                            <p className="text-red-500 font-semibold">Borrowed</p>
                                                         )
                                                     }
-                                                    else if(books.status === "Available"){
+                                                    else if(books.status === "Selected"){
                                                         return (
-                                                            <p className="text-green-500 font-semibold">Seleted</p>
+                                                            <p className="text-yellow-500 font-semibold">Seleted</p>
                                                         )
                                                     }
                                                 })()

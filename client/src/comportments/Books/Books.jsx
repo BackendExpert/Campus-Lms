@@ -5,6 +5,7 @@ import  secureLocalStorage  from  "react-secure-storage"
 import CountUp from 'react-countup';
 import AddBook from "./AddBook";
 import axios from "axios";
+import AllBooks from "./AllBooks";
 
 
 const Books = () => {
@@ -76,6 +77,11 @@ const Books = () => {
                         if(buttonValue === "add_book"){
                             return (
                                 <AddBook />
+                            )
+                        }
+                        if(buttonValue === "Books"){
+                            return (
+                                <AllBooks />
                             )
                         }
                     })()

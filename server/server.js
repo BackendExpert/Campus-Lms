@@ -220,6 +220,21 @@ app.post('/AddBook', (req, res) => {
     })
 })
 
+// All books
+
+app.get('/AllBooks', (req, res) => {
+    const slq = "SELECT * FROM books"
+
+    connection.query(sql, (err, result) => {
+        if(err) {
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 // all end points end
 
 //check the server is working

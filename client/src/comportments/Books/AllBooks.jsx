@@ -55,10 +55,15 @@ const AllBooks = () => {
                                             {books.Name}
                                         </th>
                                         <td class="px-6 py-4">
-                                            {books.author1},{books.author2},{books.author3},
+                                            {books.author1}, {books.author2}, {books.author3}
                                         </td>
                                         <td class="px-6 py-4">
                                             {books.status}
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <button className="py-2 px-8 text-blue-500 font-semibold shadow-md rounded duration-500 hover:bg-blue-500 hover:text-white">
+                                                Borrow
+                                            </button>
                                         </td>
                                     </tr>
                                 )

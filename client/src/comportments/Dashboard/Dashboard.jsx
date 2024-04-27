@@ -31,7 +31,7 @@ const Dashboard = () => {
         {id: 2, name: "Borrowed Books", link: "#", icon: <Icons name="book" size="large"></Icons>, btnValue: "Borrowed Books"},
         {id: 3, name: "Users", link: "#", icon: <Icons name="people" size="large"></Icons>, btnValue: "Users"},
         {id: 4, name: "My Borrowed", link: "#", icon: <Icons name="book" size="large"></Icons>, btnValue: "My Borrowed"},
-        {id: 5, name: "All Books", link: "#", icon: <Icons name="books" size="large"></Icons>, btnValue: "All Books"},        
+        {id: 5, name: "All Books", link: "#", icon: <Icons name="book" size="large"></Icons>, btnValue: "All Books"},        
         {id: 6, name: "Profile", link: "#", icon: <Icons name="person" size="large"></Icons>, btnValue: "Profile"},        
     ]
 
@@ -94,7 +94,7 @@ const Dashboard = () => {
                                     )
                                 }
                                 if(RoleUser === "user"){
-                                    if(sidem.id === 4 || sidem.id === 5){
+                                    if(sidem.id === 4 || sidem.id === 5 || sidem.id === 6){
                                         return (
                                             <Link to={sidem.link}>
                                                 <div onClick={() => HeadleButtonClick(sidem.btnValue)} className="flex py-2 text-gray-400 duration-500 hover:text-[#3B71CA]">                        

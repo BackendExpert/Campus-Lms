@@ -48,8 +48,17 @@ const AllBooks = () => {
                             AllBooks.map((books, index) => {
                                 return (
                                     <tr key={index}>
-                                        <td class="px-6 py-4">
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                             {books.ISBN_No}
+                                        </th>
+                                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                            {books.Name}
+                                        </th>
+                                        <td class="px-6 py-4">
+                                            {books.author1},{books.author2},{books.author3},
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            {books.status}
                                         </td>
                                     </tr>
                                 )

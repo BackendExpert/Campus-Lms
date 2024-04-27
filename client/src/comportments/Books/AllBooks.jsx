@@ -2,36 +2,74 @@ import React from 'react'
 
 const AllBooks = () => {
   return (
-    <div>
-        <h1>All Books</h1>
+    <div className='bg-white py-4 px-8 my-8 rounded-2xl shadow-md'>
+        <h1 className='text-gray-500 text-2xl font-semibold my-4'>All Books</h1>
 
         <div className="">
-            <table class="table-auto">
-            <thead>
-                <tr>
-                    <th>Song</th>
-                    <th>Artist</th>
-                    <th>Year</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-                    <td>Malcolm Lockyer</td>
-                    <td>1961</td>
-                </tr>
-                <tr>
-                    <td>Witchy Woman</td>
-                    <td>The Eagles</td>
-                    <td>1972</td>
-                </tr>
-                <tr>
-                    <td>Shining Star</td>
-                    <td>Earth, Wind, and Fire</td>
-                    <td>1975</td>
-                </tr>
-                </tbody>
-            </table>
+            <div class="relative overflow-x-auto">
+                <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        <tr>
+                            <th scope="col" class="px-6 py-3">
+                                Product name
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Color
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Category
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Price
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                Apple MacBook Pro 17"
+                            </th>
+                            <td class="px-6 py-4">
+                                Silver
+                            </td>
+                            <td class="px-6 py-4">
+                                Laptop
+                            </td>
+                            <td class="px-6 py-4">
+                                $2999
+                            </td>
+                        </tr>
+                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                Microsoft Surface Pro
+                            </th>
+                            <td class="px-6 py-4">
+                                White
+                            </td>
+                            <td class="px-6 py-4">
+                                Laptop PC
+                            </td>
+                            <td class="px-6 py-4">
+                                $1999
+                            </td>
+                        </tr>
+                        <tr class="bg-white dark:bg-gray-800">
+                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                Magic Mouse 2
+                            </th>
+                            <td class="px-6 py-4">
+                                Black
+                            </td>
+                            <td class="px-6 py-4">
+                                Accessories
+                            </td>
+                            <td class="px-6 py-4">
+                                $99
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
   )

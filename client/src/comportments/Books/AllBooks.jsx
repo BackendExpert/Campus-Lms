@@ -4,8 +4,11 @@ import { useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import  secureLocalStorage  from  "react-secure-storage"
 
-
 const AllBooks = () => {
+    const navigate = useNavigate() 
+    const RoleUser = secureLocalStorage.getItem("Login1");
+    const EmailUser = secureLocalStorage.getItem("login2");
+
   return (
     <div className='bg-white py-4 px-8 my-8 rounded-2xl shadow-md'>
         <h1 className='text-gray-500 text-2xl font-semibold my-4'>All Books</h1>

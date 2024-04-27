@@ -48,7 +48,9 @@ const AllBooks = () => {
                             AllBooks.map((books, index) => {
                                 return (
                                     <tr key={index}>
-                                        
+                                        <td class="px-6 py-4">
+                                            {books.ISBN_No}
+                                        </td>
                                     </tr>
                                 )
                             })

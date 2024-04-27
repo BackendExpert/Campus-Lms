@@ -10,7 +10,7 @@ const AllBooks = () => {
     const EmailUser = secureLocalStorage.getItem("login2");
 
     const [AllBooks, SetAllBooks] = useState([])
-    
+
     useEffect(() => {
         axios.get('http://localhost:8081/AllBooks')
         .then(res => (SetAllBooks(res.data)))
@@ -44,6 +44,15 @@ const AllBooks = () => {
                         </tr>
                     </thead>
                     <tbody>
+                        {
+                            AllBooks.map((books, index) => {
+                                return (
+                                    <tr key={index}>
+                                        
+                                    </tr>
+                                )
+                            })
+                        }
                         <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                             <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 Apple MacBook Pro 17"

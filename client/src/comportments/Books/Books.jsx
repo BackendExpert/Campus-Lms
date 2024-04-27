@@ -32,7 +32,7 @@ const Books = () => {
 
             try {
                 const BorrowBKCount = await axios.get('http://localhost:8081/BorrowBooksCount');
-                SetCoutBooks(BorrowBKCount.data.BKs);
+                SetCountBorrowBooks(BorrowBKCount.data.BKs);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
@@ -44,7 +44,7 @@ const Books = () => {
 
     const BookData = [
         {id: 1, btnValue: "Books", name: "Books", value: <CountUp end={CountBooks}/>, icon: <Icons name="book" size="large"></Icons>, style: 'text-green-500'},
-        {id: 2, btnValue: "bkBorrow", name: "Books Borrowed", value: <CountUp end={20}/>, icon: <Icons name="book" size="large"></Icons>, style: 'text-red-500'},
+        {id: 2, btnValue: "bkBorrow", name: "Books Borrowed", value: <CountUp end={CountBorrowBooks}/>, icon: <Icons name="book" size="large"></Icons>, style: 'text-red-500'},
         {id: 3, btnValue: "bkSelected", name: "Books Selected", value: <CountUp end={20}/>, icon: <Icons name="book" size="large"></Icons>, style: 'text-yellow-500'},
         {id: 4, btnValue: "add_book", name: "Add New Book", icon: <Icons name="add" size="large"></Icons>, style: 'text-white bg-green-500'},
     ]

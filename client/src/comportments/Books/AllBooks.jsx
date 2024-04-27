@@ -10,8 +10,12 @@ const AllBooks = () => {
     const EmailUser = secureLocalStorage.getItem("login2");
 
     const [AllBooks, SetAllBooks] = useState([])
-    axios.get('http://localhost:8081/AllBooks')
-    .then(res => (SetAllBooks(res.data)))
+    
+    useEffect(() => {
+        axios.get('http://localhost:8081/AllBooks')
+        .then(res => (SetAllBooks(res.data)))
+        .catch(err => console.log(err))
+    }, [])
 
   return (
     <div className='bg-white py-4 px-8 my-8 rounded-2xl shadow-md'>

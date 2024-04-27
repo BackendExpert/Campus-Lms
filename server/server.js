@@ -223,7 +223,7 @@ app.post('/AddBook', (req, res) => {
 // All books
 
 app.get('/AllBooks', (req, res) => {
-    const slq = "SELECT * FROM books"
+    const sql = "SELECT * FROM books"
 
     connection.query(sql, (err, result) => {
         if(err) {

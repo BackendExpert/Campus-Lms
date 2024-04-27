@@ -19,6 +19,7 @@ const Books = () => {
         SetButtonValue(clickValue)   
     }
     const [CountBooks, SetCoutBooks] = useState(0)
+    const [CountBorrowBooks, SetCountBorrowBooks] = useState(0)
 
     useEffect(() => {
         const fetchData = async () => {

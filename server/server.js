@@ -318,6 +318,22 @@ app.get('/ViewAllBooks', (req, res) => {
     })
 })
 
+// Count users
+
+app.get('/UserCount', (req, res) => {
+    const sql = "SELECT COUNT(ID) AS allUsers FROM users";
+  
+    connection.query(sql, (error, results) => {
+      if (error) {
+        console.error('Error fetching data:', error);
+        res.status(500).send({ message: 'Error fetching data' });
+        return;
+      }
+  
+      res.json({ allUsers: results[0].allUsers }); // Send count in JSON format
+    });
+})
+
 // all end points end
 
 //check the server is working

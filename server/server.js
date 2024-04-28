@@ -334,6 +334,20 @@ app.get('/UserCount', (req, res) => {
     });
 })
 
+// BookLastThree
+
+app.get('/BookLastThree', (req, re) => {
+    const sql = "SELECT * FROM books ORDER BY id DESC LIMIT 3;"
+    connection.query(sql, (err, result) => {
+        if(err) {
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 // all end points end
 
 //check the server is working

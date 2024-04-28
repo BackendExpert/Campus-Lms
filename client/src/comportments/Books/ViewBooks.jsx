@@ -36,7 +36,13 @@ const ViewBooks = () => {
 
           <div className="">
             <div className="lg:grid grid-cols-4 gap-4">
-              <div className="b"></div>
+              <div className="bg-gray-200 py-8 px-4 shadow-xl rounded-xl">
+                <p className="font-semibold">Book Name : <span className="">Programming</span></p>
+                <p className="font-semibold">Book Authors : <span className="">Kamal, Nimali, Jehan</span></p>
+
+                <button className="bg-yellow-500 text-white py-2 px-4 rounded my-4 duration-500 hover:bg-yellow-600 hover:shadow-xl">Select</button>
+
+              </div>
             </div>
           </div>
         </div>

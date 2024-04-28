@@ -336,7 +336,7 @@ app.get('/UserCount', (req, res) => {
 
 // BookLastThree
 
-app.get('/BookLastThree', (req, re) => {
+app.get('/BookLastThree', (req, res) => {
     const sql = "SELECT * FROM books ORDER BY id DESC LIMIT 3;"
     connection.query(sql, (err, result) => {
         if(err) {

@@ -14,7 +14,7 @@ const BorrowedBooks = () => {
 
     useEffect(() => {
         axios.get('http://localhost:8081/BorrowedBooks')
-        .then(res => (SetAllBooks(res.data)))
+        .then(res => (SetBorrowBooks(res.data)))
         .catch(err => console.log(err))
     }, [])
 
@@ -61,19 +61,9 @@ const BorrowedBooks = () => {
                                         <td class="px-6 py-4">
                                             {
                                                 (() => {
-                                                    if(books.status === "Available"){
-                                                        return (
-                                                            <p className="text-green-500 font-semibold">Available</p>
-                                                        )
-                                                    }
-                                                    else if(books.status === "Borrow"){
+                                                    if(books.status === "Borrow"){
                                                         return (
                                                             <p className="text-red-500 font-semibold">Borrowed</p>
-                                                        )
-                                                    }
-                                                    else if(books.status === "Selected"){
-                                                        return (
-                                                            <p className="text-yellow-500 font-semibold">Seleted</p>
                                                         )
                                                     }
                                                 })()
@@ -85,15 +75,8 @@ const BorrowedBooks = () => {
                                                 (() => {
                                                     if(books.status === "Borrow"){
                                                         return (
-                                                            <button className="py-2 px-8 text-red-500 font-semibold shadow-md rounded duration-500 hover:bg-red-500 hover:text-white">
-                                                                Return
-                                                            </button>
-                                                        )
-                                                    }
-                                                    else{
-                                                        return (
                                                             <button className="py-2 px-8 text-blue-500 font-semibold shadow-md rounded duration-500 hover:bg-blue-500 hover:text-white">
-                                                                Borrow
+                                                                Return
                                                             </button>
                                                         )
                                                     }

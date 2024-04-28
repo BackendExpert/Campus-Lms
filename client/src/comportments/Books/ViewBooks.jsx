@@ -66,9 +66,9 @@ const ViewBooks = () => {
                                 <span className="text-red-500 font-semibold mt-6">Borrow</span>
                               )
                             }
-                            if(books.status === "Available"){
+                            if(books.status === "Selected"){
                               return(
-                                <span className="text-green-500 font-semibold mt-6">Available</span>
+                                <span className="text-yellow-600 font-semibold mt-6">Selected</span>
                               )
                             }
                           })()

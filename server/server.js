@@ -303,6 +303,21 @@ app.get('/SelectedBooks', (req, res) => {
     })
 })
 
+
+// ViewAllBooks
+
+app.get('/ViewAllBooks', (req, res) => {
+    const sql = "SELECT * FROM books"
+    connection.query(sql, (err, result) => {
+        if(err) {
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 // all end points end
 
 //check the server is working

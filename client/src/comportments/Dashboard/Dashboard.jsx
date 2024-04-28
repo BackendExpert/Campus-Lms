@@ -22,19 +22,7 @@ const Dashboard = () => {
     const HeadleButtonClick = (clickValue) => {
         SetButtonValue(clickValue)   
     }
-    
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const BKCount = await axios.get('http://localhost:8081/BooksCount');
-                SetCoutBooks(BKCount.data.BKs);
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
 
-        }
-        fetchData();
-    }, [])
 
     const allUserSide = [
         {id: 1, name: "Books", link: "#", icon: <Icons name="book" size="large"></Icons>, btnValue: "Books"},

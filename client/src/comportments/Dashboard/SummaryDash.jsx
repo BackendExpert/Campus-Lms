@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import  secureLocalStorage  from  "react-secure-storage"
 import CountUp from 'react-countup';
+import axios from "axios";
 
 const SummaryDash = () => {
     const navigate = useNavigate() 
@@ -10,8 +11,24 @@ const SummaryDash = () => {
     const RoleUser = secureLocalStorage.getItem("Login1");
     const EmailUser = secureLocalStorage.getItem("login2");
 
+    const [CountBooks, SetCoutBooks] = useState(0)
+    
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const BKCount = await axios.get('http://localhost:8081/BooksCount');
+                SetCoutBooks(BKCount.data.BKs);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+
+        }
+        fetchData();
+    }, [])
+
+
     const dataCount = [
-        {id: 1, name: "Books", link: "#", value: <CountUp end={20}/>, icon: <Icons name="book" size="large"></Icons>, style: "text-purple-500"},
+        {id: 1, name: "Books", link: "#", value: <CountUp end={CountBooks}/>, icon: <Icons name="book" size="large"></Icons>, style: "text-purple-500"},
         {id: 2, name: "Borrowed Books", link: "#", value: <CountUp end={20}/>, icon: <Icons name="book" size="large"></Icons>, style: "text-yellow-500"}, 
         {id: 3, name: "My Borrowed", link: "#", value: <CountUp end={20}/>, icon: <Icons name="book" size="large"></Icons>, style: "text-green-500"},
         {id: 4, name: "Users", link: "#", value: <CountUp end={20}/>, icon: <Icons name="people" size="large"></Icons>, style: "text-green-500"}, 

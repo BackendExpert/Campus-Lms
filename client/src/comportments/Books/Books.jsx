@@ -6,6 +6,7 @@ import CountUp from 'react-countup';
 import AddBook from "./AddBook";
 import axios from "axios";
 import AllBooks from "./AllBooks";
+import BorrowedBooks from "./BorrowedBooks";
 
 
 const Books = () => {
@@ -100,6 +101,11 @@ const Books = () => {
                         if(buttonValue === "Books"){
                             return (
                                 <AllBooks />
+                            )
+                        }
+                        if(buttonValue === "bkBorrow"){
+                            return (
+                                <BorrowedBooks />
                             )
                         }
                     })()

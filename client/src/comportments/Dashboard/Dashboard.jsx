@@ -7,9 +7,6 @@ import Books from "../Books/Books"
 import DashFooter from "./DashFooter"
 import AddBook from "../Books/AddBook"
 
-
-
-
 const Dashboard = () => {
     const navigate = useNavigate() 
 
@@ -26,6 +23,19 @@ const Dashboard = () => {
         SetButtonValue(clickValue)   
     }
     
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const BKCount = await axios.get('http://localhost:8081/BooksCount');
+                SetCoutBooks(BKCount.data.BKs);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+
+        }
+        fetchData();
+    }, [])
+
     const allUserSide = [
         {id: 1, name: "Books", link: "#", icon: <Icons name="book" size="large"></Icons>, btnValue: "Books"},
         {id: 2, name: "Borrowed Books", link: "#", icon: <Icons name="book" size="large"></Icons>, btnValue: "Borrowed Books"},

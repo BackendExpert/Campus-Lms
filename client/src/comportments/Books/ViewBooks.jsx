@@ -65,12 +65,18 @@ const ViewBooks = () => {
                             }
                             if(books.status === "Borrow"){
                               return(
-                                <span className="text-red-500 font-semibold mt-6">Borrow</span>
+                                <div className="flex justify-between mr-5">
+                                  <p className="bg-red-500 text-white py-2 px-4 rounded my-4">Borrowed</p>
+                                  <span className="text-red-500 font-semibold mt-6">Borrow</span>
+                                </div>
                               )
                             }
                             if(books.status === "Selected"){
                               return(
-                                <span className="text-yellow-600 font-semibold mt-6">Selected</span>
+                                <div className="flex justify-between mr-5">
+                                  <p className="bg-yellow-600 text-white py-2 px-4 rounded my-4">Selected</p>
+                                  <span className="text-yellow-500 font-semibold mt-6">Selected</span>
+                                </div>
                               )
                             }
                           })()

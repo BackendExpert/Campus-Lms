@@ -41,7 +41,7 @@ const SummaryDash = () => {
 
             try {
                 const CountUsers = await axios.get('http://localhost:8081/UserCount');
-                SetCountUsers(CountUsers.data.SeletedBks);
+                SetCountUsers(CountUsers.data.allUsers);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
@@ -55,7 +55,7 @@ const SummaryDash = () => {
         {id: 1, name: "Books", link: "#", value: <CountUp end={CountBooks}/>, icon: <Icons name="book" size="large"></Icons>, style: "text-purple-500"},
         {id: 2, name: "Borrowed Books", link: "#", value: <CountUp end={CountBorrowBooks}/>, icon: <Icons name="book" size="large"></Icons>, style: "text-yellow-500"}, 
         {id: 3, name: "My Borrowed", link: "#", value: <CountUp end={CountSelectedBooks}/>, icon: <Icons name="book" size="large"></Icons>, style: "text-green-500"},
-        {id: 4, name: "Users", link: "#", value: <CountUp end={20}/>, icon: <Icons name="people" size="large"></Icons>, style: "text-green-500"}, 
+        {id: 4, name: "Users", link: "#", value: <CountUp end={CountUsers}/>, icon: <Icons name="people" size="large"></Icons>, style: "text-green-500"}, 
                 
     ]
 

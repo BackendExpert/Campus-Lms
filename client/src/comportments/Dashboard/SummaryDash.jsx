@@ -140,7 +140,7 @@ const SummaryDash = () => {
                                                     <img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="" />
                                                 </div>
                                                 <div className="">
-                                                    <p className="py-2">Name : {mydata.username} </p>
+                                                    <p className="py-2">Name :  </p>
                                                     <p className="py-2">Email : jehan@123.com</p>
                                                 </div>
                                             </div>

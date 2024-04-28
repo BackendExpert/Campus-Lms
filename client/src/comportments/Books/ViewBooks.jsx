@@ -15,7 +15,7 @@ const ViewBooks = () => {
     <div className="bg-gray-200 py-2 h-auto w-full">
       <div className="bg-white mx-6 my-10 px-12 py-16 rounded-2xl shadow-md">
         <Link>
-          <button className="text-blue-500 font-semibold py-2 px-4 duration-500 hover:bg-blue-500">Back</button>
+          <button className="text-blue-500 font-semibold py-2 px-4 rounded shadow-xl duration-500 hover:bg-blue-500 hover:text-white">Back</button>
         </Link>
       </div>
     </div>

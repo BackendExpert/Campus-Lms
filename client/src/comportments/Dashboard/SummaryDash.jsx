@@ -140,9 +140,6 @@ const SummaryDash = () => {
                                     <p className="py-2">Address : kandy</p>
                                     <p className="py-2">Name : Jehan </p>
                                     <p className="py-2">Address : kandy</p>
-                                    <Link>
-                                        <button className="font-medium py-2 px-4 text-blue-600 rounded duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">More</button>
-                                    </Link>
                                 </div>
                             </div>
                         </div>  

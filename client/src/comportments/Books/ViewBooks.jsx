@@ -13,7 +13,7 @@ const ViewBooks = () => {
 
   useEffect(() => {
     axios.get('http://localhost:8081/ViewAllBooks')
-    .then(res => (SetBorrowBooks(res.data)))
+    .then(res => (SetAllBooks(res.data)))
     .catch(err => console.log(err))
   }, [])
 
@@ -44,7 +44,7 @@ const ViewBooks = () => {
           <h1 className="text-gray-500 text-2xl text-center font-semibold my-8">Books</h1>
 
           <div className="">
-            <div className="lg:grid grid-cols-4 gap-4">
+            <div className="lg:grid grid-cols-3 gap-4">
               {
                 AllBooks.map((books) => {
                   return (
@@ -52,8 +52,11 @@ const ViewBooks = () => {
                       <p className="font-semibold">Book Name : <span className="">Programming</span></p>
                       <p className="font-semibold">Book Authors : <span className="">Kamal, Nimali, Jehan</span></p>
       
-                      <button className="bg-yellow-500 text-white py-2 px-4 rounded my-4 duration-500 hover:bg-yellow-600 hover:shadow-xl">Select</button>
-      
+                      <div className="flex justify-between mr-5">
+                        <button className="bg-yellow-500 text-white py-2 px-4 rounded my-4 duration-500 hover:bg-yellow-600 hover:shadow-xl">Select</button>
+                        <span className="text-green-500 font-semibold mt-6">Available</span>
+                      </div>
+
                     </div>
                   )
                 })

@@ -186,8 +186,8 @@ const SummaryDash = () => {
                                                 <p className="">Authors : {lastBooks.author1}, {lastBooks.author2}, {lastBooks.author3}</p>
                                             </div>
                                             <div className="my-8 text-center">
-                                                <Link>
-                                                <button className="font-medium py-2 px-4 text-blue-600 rounded duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">View more</button>
+                                                <Link to={'/ViewBooks'}>
+                                                    <button className="font-medium py-2 px-4 text-blue-600 rounded duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">View more</button>
                                                 </Link>
                                             </div>
                                         </div> 

@@ -11,7 +11,7 @@ const ViewBooks = () => {
 
   return (
     <div className="bg-gray-200 py-2 h-auto w-full">
-      <div className="bg-white mx-6 my-10 px-12 py-16 rounded-2xl shadow-md">
+      <div className="mx-6 my-10 px-12 py-16 rounded-2xl ">
         {
           (() => {
             if(RoleUser !== null && EmailUser !== null){
@@ -35,7 +35,9 @@ const ViewBooks = () => {
           <h1 className="text-gray-500 text-2xl text-center font-semibold my-8">Books</h1>
 
           <div className="">
-            
+            <div className="lg:grid grid-cols-4 gap-4">
+              <div className="b"></div>
+            </div>
           </div>
         </div>
 

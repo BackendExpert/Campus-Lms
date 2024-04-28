@@ -50,6 +50,14 @@ const SummaryDash = () => {
         fetchData();
     }, [])
 
+    const [lastThreeBooks, SetlastThreeBooks] = useState([])
+
+    useEffect(() => {
+        axios.get('http://localhost:8081/BookLastThree')
+        .then(res => (SetlastThreeBooks(res.data)))
+        .catch(err => console.log(err))
+    }, [])
+
 
     const dataCount = [
         {id: 1, name: "Books", link: "#", value: <CountUp end={CountBooks}/>, icon: <Icons name="book" size="large"></Icons>, style: "text-purple-500"},

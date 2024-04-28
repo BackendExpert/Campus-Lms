@@ -287,6 +287,22 @@ app.get('/BorrowedBooks', (req, res) => {
     })
 })
 
+// Selected books
+
+app.get('/SelectedBooks', (req, res) => {
+    const sql = "SELECT * FROM books WHERE status = ?"
+    const status = "Selected"
+
+    connection.query(sql, [status], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 // all end points end
 
 //check the server is working

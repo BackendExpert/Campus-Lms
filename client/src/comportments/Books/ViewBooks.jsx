@@ -6,7 +6,9 @@ import  secureLocalStorage  from  "react-secure-storage"
 
 const ViewBooks = () => {
   return (
-    <div>ViewBooks</div>
+    <div className="bg-gray-200 py-2 h-auto w-full">
+      <div className="bg-gray-200">ViewBooks</div>
+    </div>
   )
 }
 

@@ -108,6 +108,11 @@ const Books = () => {
                                 <BorrowedBooks />
                             )
                         }
+                        if(buttonValue === "bkSelected"){
+                            return (
+                                <BorrowedBooks />
+                            )
+                        }
                     })()
                 }
             </div>

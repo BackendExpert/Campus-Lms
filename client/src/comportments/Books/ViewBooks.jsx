@@ -15,14 +15,18 @@ const ViewBooks = () => {
         {
           (() => {
             if(RoleUser !== null && EmailUser !== null){
-              <Link to={'/Dashboard'}>
-                <button className="text-blue-500 font-semibold py-2 px-4 rounded duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
-              </Link>
+              return (
+                <Link to={'/Dashboard'}>
+                  <button className="text-blue-500 font-semibold py-2 px-4 rounded duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
+                </Link>
+              )
             }
             else{
-              <Link to={'/'}>
-                <button className="text-blue-500 font-semibold py-2 px-4 rounded duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
-              </Link>
+              return (
+                <Link to={'/'}>
+                  <button className="text-blue-500 font-semibold py-2 px-4 rounded duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">Back</button>
+                </Link>
+              )
             }
           })()
         }

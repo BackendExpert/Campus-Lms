@@ -182,8 +182,8 @@ const SummaryDash = () => {
                                     return (
                                         <div className="bg-white rounded-2xl lg:mx-8 mx-0 shadow-md w-full">
                                             <div className="mt-8 mx-4">
-                                                <h1 className="lg:py-0 pt-10">Book Name : Introducation to Computing</h1>
-                                                <p className="">Authors : Kamal, Nimali, Perera</p>
+                                                <h1 className="lg:py-0 pt-10">Book Name : {lastBooks.Name}</h1>
+                                                <p className="">Authors : {lastBooks.author1}, {lastBooks.author2}, {lastBooks.author3}</p>
                                             </div>
                                             <div className="my-8 text-center">
                                                 <Link>

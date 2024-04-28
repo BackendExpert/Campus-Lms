@@ -7,6 +7,7 @@ import AddBook from "./AddBook";
 import axios from "axios";
 import AllBooks from "./AllBooks";
 import BorrowedBooks from "./BorrowedBooks";
+import SelectedBooks from "./SelectedBooks";
 
 
 const Books = () => {
@@ -110,7 +111,7 @@ const Books = () => {
                         }
                         if(buttonValue === "bkSelected"){
                             return (
-                                <BorrowedBooks />
+                                <SelectedBooks />
                             )
                         }
                     })()

@@ -32,7 +32,7 @@ const ViewBooks = () => {
         }
 
         <div className="">
-          <h1 className="text-gray-500 text-2xl text-center font-semibold">Books</h1>
+          <h1 className="text-gray-500 text-2xl text-center font-semibold my-8">Books</h1>
         </div>
 
       </div>

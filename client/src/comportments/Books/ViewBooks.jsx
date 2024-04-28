@@ -11,7 +11,7 @@ const ViewBooks = () => {
 
   return (
     <div className="bg-gray-200 py-2 h-auto w-full">
-      <div className="mx-6 my-10 px-12 py-16 rounded-2xl ">
+      <div className="bg-white mx-6 my-10 px-12 py-16 rounded-2xl shadow-md">
         {
           (() => {
             if(RoleUser !== null && EmailUser !== null){

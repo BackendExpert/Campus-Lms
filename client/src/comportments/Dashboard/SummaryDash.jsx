@@ -60,7 +60,7 @@ const SummaryDash = () => {
 
     const [LoginUserData, SetLoginUserData] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:8081/BookLastThree')
+        axios.get('http://localhost:8081/LoginUser/' + EmailUser)
         .then(res => (SetlastThreeBooks(res.data)))
         .catch(err => console.log(err))
     }, [])

@@ -56,12 +56,22 @@ const ViewBooks = () => {
                         {
                           (() => {
                             if(books.status === "Available"){
-                              return(
-                                <div className="flex justify-between mr-5">
-                                  <button className="bg-yellow-500 text-white py-2 px-4 rounded my-4 duration-500 hover:bg-yellow-600 hover:shadow-xl">Select</button>
-                                  <span className="text-green-500 font-semibold mt-6">Available</span>
-                                </div>
-                              )
+                              if(EmailUser !== null && RoleUser !== null){
+                                return(
+                                  <div className="flex justify-between mr-5">
+                                    <button className="bg-yellow-500 text-white py-2 px-4 rounded my-4 duration-500 hover:bg-yellow-600 hover:shadow-xl">Select</button>
+                                    <span className="text-green-500 font-semibold mt-6">Available</span>
+                                  </div>
+                                )
+                              }
+                              else{
+                                return(
+                                  <div className="flex justify-between mr-5">
+                                    <p className="text-blue-500 font-semibold">Login to Select Books</p>
+                                    <span className="text-green-500 font-semibold mt-6">Available</span>
+                                  </div>
+                                )
+                              }
                             }
                             if(books.status === "Borrow"){
                               return(

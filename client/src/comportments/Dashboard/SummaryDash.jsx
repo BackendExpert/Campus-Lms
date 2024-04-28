@@ -131,23 +131,29 @@ const SummaryDash = () => {
                     <div className="lg:grid grid-cols-2 gap-4">
                         <div className="w-full shadow-md rounded-2xl bg-white py-6 px-4 lg:mr-5 mr-0 lg:my-0 my-2">
                             <h1 className="">My Info</h1>
-                            <div className="lg:grid grid-cols-2 gap-4">
-                                <div className="mx-4 my-6">
-                                    <div className="">
-                                        <img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="" />
-                                    </div>
-                                    <div className="">
-                                        <p className="py-2">Name : Jehan </p>
-                                        <p className="py-2">Email : jehan@123.com</p>
-                                    </div>
-                                </div>
-                                <div className="">
-                                    <p className="py-2">Name : Jehan </p>
-                                    <p className="py-2">Address : kandy</p>
-                                    <p className="py-2">Name : Jehan </p>
-                                    <p className="py-2">Address : kandy</p>
-                                </div>
-                            </div>
+                            {
+                                LoginUserData.map((mydata) => {
+                                    return (
+                                        <div className="lg:grid grid-cols-2 gap-4">
+                                            <div className="mx-4 my-6">
+                                                <div className="">
+                                                    <img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="" />
+                                                </div>
+                                                <div className="">
+                                                    <p className="py-2">Name : {mydata.username} </p>
+                                                    <p className="py-2">Email : jehan@123.com</p>
+                                                </div>
+                                            </div>
+                                            <div className="">
+                                                <p className="py-2">Name : Jehan </p>
+                                                <p className="py-2">Address : kandy</p>
+                                                <p className="py-2">Name : Jehan </p>
+                                                <p className="py-2">Address : kandy</p>
+                                            </div>
+                                        </div>
+                                    )
+                                })
+                            }
                         </div>  
                         <div className="shadow-md rounded-2xl w-full">
                             <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">

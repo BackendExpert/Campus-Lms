@@ -348,6 +348,11 @@ app.get('/BookLastThree', (req, res) => {
     })
 })
 
+app.get('/LoginUser/id', (req, res) => {
+    const userEmail = req.params.id
+    console.log(userEmail)
+})
+
 // all end points end
 
 //check the server is working

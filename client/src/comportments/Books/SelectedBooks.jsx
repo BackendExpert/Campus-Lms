@@ -45,7 +45,7 @@ const SelectedBooks = () => {
                     </thead>
                     <tbody>
                         {
-                            BorrowBooks.map((books, index) => {
+                            SelectedBooks.map((books, index) => {
                                 return (
                                     <tr key={index}>
                                         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
@@ -60,9 +60,9 @@ const SelectedBooks = () => {
                                         <td class="px-6 py-4">
                                             {
                                                 (() => {
-                                                    if(books.status === "Borrow"){
+                                                    if(books.status === "Selected"){
                                                         return (
-                                                            <p className="text-red-500 font-semibold">Borrowed</p>
+                                                            <p className="text-yellow-500 font-semibold">Selected</p>
                                                         )
                                                     }
                                                 })()
@@ -72,10 +72,10 @@ const SelectedBooks = () => {
                                         <td class="px-6 py-4">
                                             {
                                                 (() => {
-                                                    if(books.status === "Borrow"){
+                                                    if(books.status === "Selected"){
                                                         return (
                                                             <button className="py-2 px-8 text-blue-500 font-semibold shadow-md rounded duration-500 hover:bg-blue-500 hover:text-white">
-                                                                Return
+                                                                Borrow
                                                             </button>
                                                         )
                                                     }

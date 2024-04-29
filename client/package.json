@@ -13,6 +13,7 @@
     "@jehankandy/jkreact-icons": "file:jehankandy-jkreact-icons-1.1.0.tgz",
     "@reacticons/ionicons": "^7.1.0",
     "axios": "^1.6.8",
+    "jkreact-icons": "file:jkreact-icons-1.1.0.tgz",
     "react": "^18.2.0",
     "react-countup": "^6.5.3",
     "react-dom": "^18.2.0",

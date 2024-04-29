@@ -5,7 +5,7 @@ import Footer from './Footer'
 import  secureLocalStorage  from  "react-secure-storage";
 import { Link, useNavigate } from 'react-router-dom';
 import {
-    TwoNumberFill,
+    TwoNumberSqureFill,
     TwoNumberOutline,
 
 } from '@jehankandy/jkreact-icons'
@@ -41,7 +41,7 @@ const HomePage = () => {
         <div className="bg-white lg:mx-24 mx-8 py-16 px-12 lg:my-[-100px] my-[-280px] rounded shadow-2xl lg:mb-40 mb-20">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi sed ratione possimus quia assumenda, in dicta voluptatibus, deserunt et odio veniam ullam voluptate enim ea sit quasi, blanditiis laborum perspiciatis?
             Deleniti voluptatum eum quod consequatur quas ratione vero illo esse expedita a, architecto totam dolores harum velit molestias non fugit obcaecati quae ipsum at. Suscipit et iste iusto hic eaque.
-            <TwoNumberFill color={"red"} size={50} />
+            <TwoNumberSqureFill color={"red"} size={50} />
             <TwoNumberOutline color={"blue"} size={50} />
         </div>
         <div className="lg:my-8  text-center">

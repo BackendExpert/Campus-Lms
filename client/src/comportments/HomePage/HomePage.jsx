@@ -5,7 +5,7 @@ import Footer from './Footer'
 import  secureLocalStorage  from  "react-secure-storage";
 import { Link, useNavigate } from 'react-router-dom';
 import {
-    NineNumberSqureOutline,
+    LogoBluetooth,
 
 } from '@jehankandy/jkreact-icons'
 
@@ -18,7 +18,7 @@ const HomePage = () => {
 
   return (
     <div>
-        <NineNumberSqureOutline color={"red"} size={50} />
+        <LogoBluetooth color={"red"} size={50} />
 
         <div className='lg:py-[4%] py-12 lg:px-16 bg-[url(https://wallpapercave.com/wp/wp10395041.jpg)] bg-center bg-cover lg:h-[80vh] h-screen w-full'>
             <Navbar />

@@ -5,8 +5,7 @@ import Footer from './Footer'
 import  secureLocalStorage  from  "react-secure-storage";
 import { Link, useNavigate } from 'react-router-dom';
 import {
-    FourNumberSqureFill,
-    FourNumberSqureOutline,
+    NineNumberSqureOutline,
 
 } from '@jehankandy/jkreact-icons'
 
@@ -19,6 +18,8 @@ const HomePage = () => {
 
   return (
     <div>
+        <NineNumberSqureOutline color={"red"} size={50} />
+
         <div className='lg:py-[4%] py-12 lg:px-16 bg-[url(https://wallpapercave.com/wp/wp10395041.jpg)] bg-center bg-cover lg:h-[80vh] h-screen w-full'>
             <Navbar />
             <div className="text-white text-center my-12">
@@ -41,8 +42,7 @@ const HomePage = () => {
         <div className="bg-white lg:mx-24 mx-8 py-16 px-12 lg:my-[-100px] my-[-280px] rounded shadow-2xl lg:mb-40 mb-20">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi sed ratione possimus quia assumenda, in dicta voluptatibus, deserunt et odio veniam ullam voluptate enim ea sit quasi, blanditiis laborum perspiciatis?
             Deleniti voluptatum eum quod consequatur quas ratione vero illo esse expedita a, architecto totam dolores harum velit molestias non fugit obcaecati quae ipsum at. Suscipit et iste iusto hic eaque.
-            <FourNumberSqureFill color={"red"} size={50} />
-            <FourNumberSqureOutline color={"blue"} size={50} />
+
         </div>
         <div className="lg:my-8  text-center">
             <h1 className="text-4xl font-semibold text-gray-500">The Library of NIFS</h1>

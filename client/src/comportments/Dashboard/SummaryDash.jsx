@@ -141,7 +141,7 @@ const SummaryDash = () => {
                                                 </div>
                                                 <div className="">
                                                     <p className="py-2">Name :  {LoginUserData[0].username}</p>
-                                                    <p className="py-2">Email : jehan@123.com</p>
+                                                    <p className="py-2">Email : {LoginUserData[0].email}</p>
                                                 </div>
                                             </div>
                                             <div className="">

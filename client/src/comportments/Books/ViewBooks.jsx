@@ -71,7 +71,7 @@ const ViewBooks = () => {
                               if(EmailUser !== null && RoleUser !== null){
                                 return(
                                   <div className="flex justify-between mr-5">
-                                    <button onClick={() => headleSelect(books.id)} className="bg-yellow-500 text-white py-2 px-4 rounded my-4 duration-500 hover:bg-yellow-600 hover:shadow-xl">Select</button>
+                                    <button onClick={() => headleSelect(books.ID)} className="bg-yellow-500 text-white py-2 px-4 rounded my-4 duration-500 hover:bg-yellow-600 hover:shadow-xl">Select</button>
                                     <span className="text-green-500 font-semibold mt-6">Available</span>
                                   </div>
                                 )

@@ -372,8 +372,10 @@ app.post('/SelectBook', (req, res) => {
 
         if(result){
             const bookISBN = result[0].ISBN_No
-
             // console.log(bookISBN)
+
+            const sql = "INSERT INTO "
+
         }
         else{
             return res.json({Error: "Error on Server"})

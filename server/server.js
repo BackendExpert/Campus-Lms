@@ -365,7 +365,7 @@ app.get('/LoginUser/:id', (req, res) => {
 
 app.post('/SelectBook/:id', (req, res) => {
     const bookID = req.params.id
-    console.log(bookID)
+    console.log(bookID, req.body)
 })
 
 // all end points end

@@ -145,7 +145,20 @@ const SummaryDash = () => {
                                                 </div>
                                             </div>
                                             <div className="">
-                                                <p className="py-2">Name : Jehan </p>
+                                                <p className="py-2">Role : {
+                                                (() => {
+                                                    if(LoginUserData[0].role === "user"){
+                                                        return (
+                                                            <span className="text-yellow-500 font-semibold">User</span>
+                                                        )
+                                                    }
+                                                    else if(LoginUserData[0].role === "SuperAdmin"){
+                                                        return (
+                                                            <span className="text-red-500 font-semibold">SuperAdmin</span>
+                                                        )
+                                                    }
+                                                })()
+                                                } </p>
                                                 <p className="py-2">Address : kandy</p>
                                                 <p className="py-2">Name : Jehan </p>
                                                 <p className="py-2">Address : kandy</p>

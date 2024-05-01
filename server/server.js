@@ -390,12 +390,13 @@ app.post('/SelectBook', (req, res) => {
                 }
                 else{
                     // update book table
-                    const updateBook = "UPDATE books SET status = ? WHERE = ?"
+                    const updateBook = "UPDATE books SET status = ? WHERE ID = ?"
                     const BKstatus = "Selected"
                     
                     connection.query(updateBook, [BKstatus, req.body.id], (err, result) => {
                         if(err){
-                            return res.json("Internal Server Error")
+                            // return res.json({Error: "Internal Server Error"})
+                            console.log(err)
                         }
                         else{
                             return res.json({Status: "Successs"})

@@ -350,7 +350,7 @@ app.get('/BookLastThree', (req, res) => {
 
 app.get('/LoginUser/:id', (req, res) => {
     const userEmail = req.params.id
-    console.log(userEmail)
+    // console.log(userEmail)
 
     const sql = "SELECT * FROM users WHERE email = ?"
     connection.query(sql, [userEmail], (err, result) => {

@@ -374,7 +374,8 @@ app.post('/SelectBook', (req, res) => {
             const bookISBN = result[0].ISBN_No
             // console.log(bookISBN)
 
-            const sql = "INSERT INTO "
+            const sql = "INSERT INTO selectbook(ISBN_No, selectEmail, selectDate, status) VALUES (?)"
+            
 
         }
         else{

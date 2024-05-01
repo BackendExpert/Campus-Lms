@@ -375,7 +375,24 @@ app.post('/SelectBook', (req, res) => {
             // console.log(bookISBN)
 
             const sql = "INSERT INTO selectbook(ISBN_No, selectEmail, selectDate, status) VALUES (?)"
+            const select_at = new Date()
+            const status = "Selected"
+            const values = [
+                bookISBN,
+                req.body.EmailUser,
+                select_at,
+                status
+            ]         
             
+            connection.query(sql, [values], (err, result) => {
+                if(err) {
+                    return res.json({Error: "Error on Server"})
+                }
+                else{
+                    // update book table
+                    const updateBook = "UPDATE books SET "
+                }
+            })
 
         }
         else{

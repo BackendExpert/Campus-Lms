@@ -17,6 +17,18 @@ const ViewBooks = () => {
     .catch(err => console.log(err))
   }, [])
 
+  const headleSelect = (id) => {
+    axios.post('http://localhost:8081/SelectBook/' + id, EmailUser)
+    .then(res => {
+      if(res.data.Status === "Successs"){
+        alert("Book Selected Successfull")
+        window.location.reload()
+      }
+      else{
+        alert(res.data.Error)
+      }
+    })
+  }
 
   return (
     <div className="bg-gray-200 py-2 h-auto w-full">
@@ -59,7 +71,7 @@ const ViewBooks = () => {
                               if(EmailUser !== null && RoleUser !== null){
                                 return(
                                   <div className="flex justify-between mr-5">
-                                    <button className="bg-yellow-500 text-white py-2 px-4 rounded my-4 duration-500 hover:bg-yellow-600 hover:shadow-xl">Select</button>
+                                    <button onClick={() => headleSelect(books.id)} className="bg-yellow-500 text-white py-2 px-4 rounded my-4 duration-500 hover:bg-yellow-600 hover:shadow-xl">Select</button>
                                     <span className="text-green-500 font-semibold mt-6">Available</span>
                                   </div>
                                 )

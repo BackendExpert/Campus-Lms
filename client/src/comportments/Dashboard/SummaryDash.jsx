@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom"
 import  secureLocalStorage  from  "react-secure-storage"
 import CountUp from 'react-countup';
 import axios from "axios";
+import AllBooks from "../Books/AllBooks";
 
 const SummaryDash = () => {
     const navigate = useNavigate() 
@@ -15,6 +16,11 @@ const SummaryDash = () => {
     const [CountBorrowBooks, SetCountBorrowBooks] = useState(0)
     const [CountSelectedBooks, SetCountSelectedBooks] = useState(0)
     const [CountUsers, SetCountUsers] = useState(0)
+
+    const [buttonValue, SetButtonValue] = useState()
+    const HeadleButtonClick = (clickValue) => {
+        SetButtonValue(clickValue)   
+    }
 
     useEffect(() => {
         const fetchData = async () => {
@@ -126,6 +132,15 @@ const SummaryDash = () => {
                         }
                     </div>
                 </div>
+                {
+                    (() => {
+                        if(buttonValue === "AllBooks"){
+                            return (
+                                <AllBooks />
+                            )
+                        }
+                    })()
+                }
                 <h1 className="px-8 py-8 text-xl font-semibold">Personal Data</h1>
                 <div className="mb-8 mx-2">
                     <div className="lg:grid grid-cols-2 gap-4">

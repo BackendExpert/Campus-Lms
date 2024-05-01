@@ -363,9 +363,22 @@ app.get('/LoginUser/:id', (req, res) => {
     })
 })
 
-app.post('/SelectBook/:id', (req, res) => {
-    const bookID = req.params.id
-    console.log(bookID, req.body)
+app.post('/SelectBook', (req, res) => {
+    console.log(req.body)
+
+    const bookSql = "SELECT * FROM books WHERE ID = ?"
+    connection.query(bookSql, [req.body.id], (err, result) => {
+        if(err) throw err
+
+        if(result){
+            const bookISBN = result[0].ISBN_No
+
+            console.log(bookISBN)
+        }
+        else{
+            return res.json({Error: "Error on Server"})
+        }
+    })
 })
 
 // all end points end

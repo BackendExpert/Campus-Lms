@@ -18,7 +18,7 @@ const ViewBooks = () => {
   }, [])
 
   const headleSelect = (id) => {
-    axios.post('http://localhost:8081/SelectBook/' + id, EmailUser)
+    axios.post('http://localhost:8081/SelectBook/', {id, EmailUser})
     .then(res => {
       if(res.data.Status === "Successs"){
         alert("Book Selected Successfull")

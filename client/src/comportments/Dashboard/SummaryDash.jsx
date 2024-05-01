@@ -61,7 +61,7 @@ const SummaryDash = () => {
     const [LoginUserData, SetLoginUserData] = useState([])
     useEffect(() => {
         axios.get('http://localhost:8081/LoginUser/' + EmailUser)
-        .then(res => (SetlastThreeBooks(res.data)))
+        .then(res => (SetLoginUserData(res.data)))
         .catch(err => console.log(err))
     }, [])
 
@@ -140,7 +140,7 @@ const SummaryDash = () => {
                                                     <img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="" />
                                                 </div>
                                                 <div className="">
-                                                    <p className="py-2">Name :  {mydata.username}</p>
+                                                    <p className="py-2">Name :  {LoginUserData[0].username}</p>
                                                     <p className="py-2">Email : jehan@123.com</p>
                                                 </div>
                                             </div>

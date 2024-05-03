@@ -58,7 +58,7 @@ const SummaryDash = () => {
 
             try {
                 const CountMySelected = await axios.get('http://localhost:8081/MySelected/' + EmailUser);
-                SetMySelected(CountMySelected.data.allUsers);
+                SetMySelected(CountMySelected.data.MySelectBK);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
@@ -86,7 +86,7 @@ const SummaryDash = () => {
         {id: 1, btnValue: "AllBooks", name: "Books", link: "#", value: <CountUp end={CountBooks}/>, icon: <Icons name="book" size="large"></Icons>, style: "text-purple-500"},
         {id: 2, btnValue: "BorrowedBook", name: "Borrowed Books", link: "#", value: <CountUp end={CountBorrowBooks}/>, icon: <Icons name="book" size="large"></Icons>, style: "text-red-500"}, 
         {id: 3, btnValue: "", name: "My Borrowed", link: "#", value: <CountUp end={20}/>, icon: <Icons name="book" size="large"></Icons>, style: "text-green-500"},
-        {id: 4, btnValue: "", name: "My Selected", link: "#", value: <CountUp end={20}/>, icon: <Icons name="book" size="large"></Icons>, style: "text-blue-500"},
+        {id: 4, btnValue: "", name: "My Selected", link: "#", value: <CountUp end={MySelected}/>, icon: <Icons name="book" size="large"></Icons>, style: "text-blue-500"},
         {id: 5, btnValue: "SelectBooks", name: "Selected Books", link: "#", value: <CountUp end={CountSelectedBooks}/>, icon: <Icons name="book" size="large"></Icons>, style: "text-yellow-500"},
         {id: 6, btnValue: "AllUsers", name: "Users", link: "#", value: <CountUp end={CountUsers}/>, icon: <Icons name="people" size="large"></Icons>, style: "text-blue-500"}, 
                 

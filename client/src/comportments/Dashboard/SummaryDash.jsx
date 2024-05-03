@@ -8,6 +8,7 @@ import AllBooks from "../Books/AllBooks";
 import SelectedBooks from "../Books/SelectedBooks";
 import BorrowedBooks from "../Books/BorrowedBooks";
 import Users from "../Users/Users";
+import MySelectedBKs from "../Profile/MySelectedBKs";
 
 
 const SummaryDash = () => {
@@ -169,7 +170,7 @@ const SummaryDash = () => {
                         }
                         if(buttonValue === "MySelected"){
                             return(
-                                
+                                <MySelectedBKs />
                             )
                         }
                     })()

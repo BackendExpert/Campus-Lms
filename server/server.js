@@ -457,7 +457,7 @@ app.get('/MySelectedBooks/:id', (req, res) => {
             // console.log(err)
         }
         else{
-            console.log(result)
+            return res.json(result)
         }
     })
 })

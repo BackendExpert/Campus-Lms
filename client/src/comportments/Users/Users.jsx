@@ -10,7 +10,15 @@ const Users = () => {
     //curent login user
     const RoleUser = secureLocalStorage.getItem("Login1");
     const EmailUser = secureLocalStorage.getItem("login2");
-    
+
+    const [AllUsers, SetAllUser] = useState([])
+
+    useEffect(() => {
+        axios.get('http://localhost:8081/AllUsers')
+        .then(res => SetAllUser(res.data))
+        .catch(err => console.log(err))
+    }, [])
+
   return (
     <div>Users</div>
   )

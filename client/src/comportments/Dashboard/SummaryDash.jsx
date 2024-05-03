@@ -217,32 +217,7 @@ const SummaryDash = () => {
                                 })
                             }
                         </div>  
-                        <div className="shadow-md rounded-2xl w-full">
-                            <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                                <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                                    <tr>
-                                        <th scope="col" className="px-6 py-3">
-                                            Trip
-                                        </th>
-                                        <th scope="col" className="px-6 py-3">
-                                            View
-                                        </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                        <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                            Colombo
-                                        </th>
-                                        <td className="px-6 py-4">
-                                            <Link>
-                                                <button className="font-medium py-2 px-4 text-blue-600 rounded duration-500 hover:bg-blue-500 hover:text-white hover:shadow-xl">View</button>
-                                            </Link>
-                                        </td>
-                                    </tr>                                
-                                </tbody>
-                            </table>
-                        </div>
+
                     </div>  
 
                     <h1 className="px-8 py-8 text-xl font-semibold">Newly Added Books</h1>   

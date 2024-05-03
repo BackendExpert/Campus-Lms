@@ -492,6 +492,7 @@ app.post('/BorrowBook/:id', (req, res) => {
             return res.json({Error: "Error on Server"})
         }
         else {
+            const borrowSql = "INSERT INTO borrowbook() VALUES(?)"
             return res.json({Status: "Success"})
         }
     })

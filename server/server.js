@@ -487,6 +487,15 @@ app.post('/BorrowBook/:id', (req, res) => {
     const sql = "UPDATE books SET status = ? WHERE ID = ?"
     const status = "Borrow"
 
+    connection.query(sql, [status, bookID], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else {
+            return res.json({Status: "Success"})
+        }
+    })
+
 })
 
 // all end points end

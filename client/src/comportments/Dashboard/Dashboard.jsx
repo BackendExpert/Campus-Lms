@@ -8,6 +8,7 @@ import DashFooter from "./DashFooter"
 import AddBook from "../Books/AddBook"
 import SelectedBooks from "../Books/SelectedBooks"
 import Users from "../Users/Users"
+import BorrowedBooks from "../Books/BorrowedBooks"
 
 const Dashboard = () => {
     const navigate = useNavigate() 
@@ -156,6 +157,11 @@ const Dashboard = () => {
                                 if(buttonValue === "Users") {
                                     return (
                                         <Users />
+                                    )
+                                }
+                                if(buttonValue === "Borrowed Books"){
+                                    return (
+                                        <BorrowedBooks />
                                     )
                                 }
 

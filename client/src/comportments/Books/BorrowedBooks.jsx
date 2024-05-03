@@ -18,7 +18,7 @@ const BorrowedBooks = () => {
         .catch(err => console.log(err))
     }, [])
 
-    const headleReturn = () => {
+    const headleReturn = (id) => {
         axios.post('http://localhost:8081/ReturnBook/' + id)
         .then(res => {
             if(res.data.Status === "Success"){

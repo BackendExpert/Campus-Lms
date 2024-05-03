@@ -18,8 +18,6 @@ const HomePage = () => {
 
   return (
     <div>
-        <LogoBluetooth color={"red"} size={50} />
-
         <div className='lg:py-[4%] py-12 lg:px-16 bg-[url(https://wallpapercave.com/wp/wp10395041.jpg)] bg-center bg-cover lg:h-[80vh] h-screen w-full'>
             <Navbar />
             <div className="text-white text-center my-12">

@@ -34,7 +34,6 @@ const Dashboard = () => {
         {id: 5, name: "My Borrowed", link: "#", icon: <Icons name="book" size="large"></Icons>, btnValue: "My Borrowed"},
         {id: 6, name: "My Selected", link: "#", icon: <Icons name="book" size="large"></Icons>, btnValue: "My Selected"},
         {id: 7, name: "All Books", link: "/ViewBooks", icon: <Icons name="book" size="large"></Icons>},        
-        {id: 8, name: "Profile", link: "#", icon: <Icons name="person" size="large"></Icons>, btnValue: "Profile"},        
     ]
 
     const navBar = [

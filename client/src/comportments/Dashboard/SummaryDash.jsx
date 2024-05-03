@@ -7,6 +7,7 @@ import axios from "axios";
 import AllBooks from "../Books/AllBooks";
 import SelectedBooks from "../Books/SelectedBooks";
 import BorrowedBooks from "../Books/BorrowedBooks";
+import Users from "../Users/Users";
 
 const SummaryDash = () => {
     const navigate = useNavigate() 
@@ -78,7 +79,7 @@ const SummaryDash = () => {
         {id: 2, btnValue: "BorrowedBook", name: "Borrowed Books", link: "#", value: <CountUp end={CountBorrowBooks}/>, icon: <Icons name="book" size="large"></Icons>, style: "text-red-500"}, 
         {id: 3, btnValue: "", name: "My Borrowed", link: "#", value: <CountUp end={20}/>, icon: <Icons name="book" size="large"></Icons>, style: "text-green-500"},
         {id: 4, btnValue: "SelectBooks", name: "Selected Books", link: "#", value: <CountUp end={CountSelectedBooks}/>, icon: <Icons name="book" size="large"></Icons>, style: "text-yellow-500"},
-        {id: 5, btnValue: "", name: "Users", link: "#", value: <CountUp end={CountUsers}/>, icon: <Icons name="people" size="large"></Icons>, style: "text-blue-500"}, 
+        {id: 5, btnValue: "AllUsers", name: "Users", link: "#", value: <CountUp end={CountUsers}/>, icon: <Icons name="people" size="large"></Icons>, style: "text-blue-500"}, 
                 
     ]
 
@@ -149,6 +150,11 @@ const SummaryDash = () => {
                         if(buttonValue === "BorrowedBook"){
                             return(
                                 <BorrowedBooks />
+                            )
+                        }
+                        if(buttonValue === "AllUsers"){
+                            return(
+                                <Users />
                             )
                         }
                     })()

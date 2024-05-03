@@ -492,22 +492,6 @@ app.post('/BorrowBook/:id', (req, res) => {
             return res.json({Error: "Error on Server"})
         }
         else {
-            const bookSql = "SELECT * FROM books WHERE ID = ?"
-            connection.query(bookSql, [bookID], (err, result) => {
-                if(err){
-                    return res.json({Error: "Error on Server"})
-                }
-                else{
-                    
-                    const borrowSql = "INSERT INTO borrowbook(BKISBN, borrowEmail, borrowData, returnData) VALUES(?)"
-                    const values = [
-                        result[0].ISBN_No,
-                        result[0].Name,
-
-                    ]
-                }
-            })
-
             return res.json({Status: "Success"})
         }
     })

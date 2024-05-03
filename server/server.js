@@ -447,8 +447,8 @@ app.get('/MySelected/:id', (req, res) => {
 
 app.get('/MySelectedBooks/:id', (req, res) => {
     const userEmail = req.params.id
-    // console.log(userEmail)
-    const sql = "SELECT * FROM selectbook WHERE status = ? && selectEmail = ?"
+    console.log(userEmail)
+    const sql = "SELECT * FROM selectbook WHERE selectEmail = ? && status = ?"
     const status = "Selected"
 
     connection.query(sql, [userEmail, status], (err, result) => {
@@ -457,7 +457,7 @@ app.get('/MySelectedBooks/:id', (req, res) => {
             // console.log(err)
         }
         else{
-            return res.json(result)
+            console.log(result)
         }
     })
 })

@@ -27,7 +27,7 @@ const Dashboard = () => {
     const allUserSide = [
         {id: 1, name: "Books", link: "#", icon: <Icons name="book" size="large"></Icons>, btnValue: "Books"},
         {id: 2, name: "Borrowed Books", link: "#", icon: <Icons name="book" size="large"></Icons>, btnValue: "Borrowed Books"},
-        {id: 3, name: "Borrowed Books", link: "#", icon: <Icons name="book" size="large"></Icons>, btnValue: "Borrowed Books"},
+        {id: 3, name: "Selected Books", link: "#", icon: <Icons name="book" size="large"></Icons>, btnValue: "Selected Books"},
         {id: 4, name: "Users", link: "#", icon: <Icons name="people" size="large"></Icons>, btnValue: "Users"},
         {id: 5, name: "My Borrowed", link: "#", icon: <Icons name="book" size="large"></Icons>, btnValue: "My Borrowed"},
         {id: 6, name: "My Selected", link: "#", icon: <Icons name="book" size="large"></Icons>, btnValue: "My Selected"},

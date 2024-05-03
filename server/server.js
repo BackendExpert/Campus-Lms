@@ -430,7 +430,7 @@ app.get('/AllUsers', (req, res) => {
 // my selected books
 app.get('/MySelected/:id', (req, res) => {
     const userEmail = req.params.id
-    const sql = "SELECT COUNT(ID) AS MySelectBK FROM books WHERE selectEmail = ?";
+    const sql = "SELECT COUNT(ID) AS MySelectBK FROM selectbook WHERE selectEmail = ?";
   
     connection.query(sql, [userEmail], (error, results) => {
       if (error) {

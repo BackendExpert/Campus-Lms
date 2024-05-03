@@ -19,6 +19,7 @@ const SummaryDash = () => {
     const [CountBorrowBooks, SetCountBorrowBooks] = useState(0)
     const [CountSelectedBooks, SetCountSelectedBooks] = useState(0)
     const [CountUsers, SetCountUsers] = useState(0)
+    const [MySelected, SetMySelected] = useState(0)
 
     const [buttonValue, SetButtonValue] = useState()
     const HeadleButtonClick = (clickValue) => {
@@ -51,6 +52,13 @@ const SummaryDash = () => {
             try {
                 const CountUsers = await axios.get('http://localhost:8081/UserCount');
                 SetCountUsers(CountUsers.data.allUsers);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+
+            try {
+                const CountMySelected = await axios.get('http://localhost:8081/MySelected/' + EmailUser);
+                SetMySelected(CountMySelected.data.allUsers);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }

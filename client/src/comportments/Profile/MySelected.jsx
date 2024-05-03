@@ -61,26 +61,7 @@ const MySelected = () => {
                                                     {MyBk.author1}, {MyBk.author2}, {MyBk.author3}
                                                 </td>
                                                 <td class="px-6 py-4">
-                                                    {
-                                                        (() => {
-                                                            if(MyBk.status === "Available"){
-                                                                return (
-                                                                    <p className="text-green-500 font-semibold">Available</p>
-                                                                )
-                                                            }
-                                                            else if(MyBk.status === "Borrow"){
-                                                                return (
-                                                                    <p className="text-red-500 font-semibold">Borrowed</p>
-                                                                )
-                                                            }
-                                                            else if(MyBk.status === "Selected"){
-                                                                return (
-                                                                    <p className="text-yellow-500 font-semibold">Seleted</p>
-                                                                )
-                                                            }
-                                                        })()
-                                                    }
-                                                    
+                                                    <p className="text-yellow-500 font-semibold">Seleted</p>
                                                 </td>
                                                 <td class="px-6 py-4">
                                                     {

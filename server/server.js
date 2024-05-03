@@ -465,18 +465,18 @@ app.get('/MySelectedBooks/:id', (req, res) => {
 // SetAsSuperAdminUser
 app.post('/SetAsSuperAdminUser/:id', (req, res) => {
     const userID = req.params.id
-    console.log(userID)
-    // const sql = "UPDATE users SET role = ? WHERE ID = ?"
-    // const role = "SuperAdmin"
+    // console.log(userID)
+    const sql = "UPDATE users SET role = ? WHERE ID = ?"
+    const role = "SuperAdmin"
 
-    // connection.query(sql, [role, userID], (err, result) => {
-    //     if(err){
-    //         return res.json({Error: "Error on Server"})
-    //     }
-    //     else{
-    //         return res.json({Status: "Success"})
-    //     }
-    // })
+    connection.query(sql, [role, userID], (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json({Status: "Success"})
+        }
+    })
 })
 
 // all end points end

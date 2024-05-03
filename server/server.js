@@ -453,6 +453,7 @@ app.get('/MySelectedBooks/:id', (req, res) => {
     connection.query(sql, [userEmail, status], (err, result) => {
         if(err) {
             return res.json({Error: "Internal Server Error"})
+            // console.log(err)
         }
         else{
             return res.json(result)

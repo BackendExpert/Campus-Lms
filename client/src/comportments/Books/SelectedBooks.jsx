@@ -87,7 +87,7 @@ const SelectedBooks = () => {
                                                 (() => {
                                                     if(books.status === "Selected"){
                                                         return (
-                                                            <button className="py-2 px-8 text-blue-500 font-semibold shadow-md rounded duration-500 hover:bg-blue-500 hover:text-white">
+                                                            <button  onClick={() => headleBorrow(books.ID)} className="py-2 px-8 text-blue-500 font-semibold shadow-md rounded duration-500 hover:bg-blue-500 hover:text-white">
                                                                 Borrow
                                                             </button>
                                                         )

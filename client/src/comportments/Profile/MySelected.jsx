@@ -64,25 +64,6 @@ const MySelected = () => {
                                                     <p className="text-yellow-500 font-semibold">Seleted</p>
                                                 </td>
                                                 <td class="px-6 py-4">
-                                                    {
-                                                        (() => {
-                                                            if(MyBk.status === "Borrow"){
-                                                                return (
-                                                                    <button className="py-2 px-8 text-red-500 font-semibold shadow-md rounded duration-500 hover:bg-red-500 hover:text-white">
-                                                                        Return
-                                                                    </button>
-                                                                )
-                                                            }
-                                                            else{
-                                                                return (
-                                                                    <button className="py-2 px-8 text-blue-500 font-semibold shadow-md rounded duration-500 hover:bg-blue-500 hover:text-white">
-                                                                        Borrow
-                                                                    </button>
-                                                                )
-                                                            }
-                                                        })()
-                                                    }
-        
                                                 </td>
                                             </tr>
                                         )

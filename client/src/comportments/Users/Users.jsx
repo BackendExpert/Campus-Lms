@@ -19,6 +19,19 @@ const Users = () => {
         .catch(err => console.log(err))
     }, [])
 
+    const SetAsSuperAdmin = (id) => {
+        axios.post('http://localhost:8081/SetAsSuperAdminUser/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("User Set As SuperAdmin Successful")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
     if(RoleUser === "SuperAdmin"){
         return (
             <div className='bg-white py-4 px-8 my-8 rounded-2xl shadow-md'>

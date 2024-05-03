@@ -10,6 +10,9 @@ const MySelected = () => {
     //curent login user
     const RoleUser = secureLocalStorage.getItem("Login1");
     const EmailUser = secureLocalStorage.getItem("login2");
+
+
+    const [MySelected, SetMySelected] = useState([])
     
   return (
     <div>MySelected</div>

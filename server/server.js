@@ -412,6 +412,20 @@ app.post('/SelectBook', (req, res) => {
     })
 })
 
+
+// get all Users
+app.get('/AllUsers', (req, res) => {
+    const sql = "SELECT * FROM users"
+    connection.query(sql, (err, result) => {
+        if(err){
+            return res.json({Error: "Error on Server"})
+        }
+        else{
+            return res.json(result)
+        }
+    })
+})
+
 // all end points end
 
 //check the server is working

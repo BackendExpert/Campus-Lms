@@ -479,6 +479,16 @@ app.post('/SetAsSuperAdminUser/:id', (req, res) => {
     })
 })
 
+// BorrowBook
+
+app.post('/BorrowBook/:id', (req, res) => {
+    const bookID = req.params.id
+
+    const sql = "UPDATE books SET status = ? WHERE ID = ?"
+    const status = "Borrow"
+
+})
+
 // all end points end
 
 //check the server is working

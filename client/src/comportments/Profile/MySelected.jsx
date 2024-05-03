@@ -19,9 +19,18 @@ const MySelected = () => {
         .catch(err => console.log(err))
     }, [])
     
-  return (
-    <div>MySelected</div>
-  )
+    if(RoleUser !== null && EmailUser !== null) {
+        return (
+            <div>MySelected</div>
+        )
+    }
+    else{
+        useEffect(() => {
+            localStorage.clear()
+            navigate('/')
+        }, [])
+    }
+
 }
 
 export default MySelected

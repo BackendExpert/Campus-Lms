@@ -169,7 +169,7 @@ const SummaryDash = () => {
                         }
                         if(buttonValue === "MySelected"){
                             return(
-                                <MySelected />
+                                
                             )
                         }
                     })()

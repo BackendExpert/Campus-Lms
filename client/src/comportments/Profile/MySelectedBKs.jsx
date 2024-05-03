@@ -5,7 +5,7 @@ import  secureLocalStorage  from  "react-secure-storage"
 import CountUp from 'react-countup';
 import axios from "axios";
 
-const MySelected = () => {
+const MySelectedBKs = () => {
     const navigate = useNavigate() 
     //curent login user
     const RoleUser = secureLocalStorage.getItem("Login1");
@@ -85,4 +85,4 @@ const MySelected = () => {
 
 }
 
-export default MySelected
+export default MySelectedBKs

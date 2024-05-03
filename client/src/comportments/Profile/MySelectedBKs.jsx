@@ -22,7 +22,7 @@ const MySelectedBKs = () => {
     if(RoleUser !== null && EmailUser !== null) {
         return (
             <div className='bg-white py-4 px-8 my-8 rounded-2xl shadow-md'>
-                <h1 className='text-gray-500 text-2xl font-semibold my-4'>All Books</h1>
+                <h1 className='text-gray-500 text-2xl font-semibold my-4'>My Selected Books</h1>
         
                 <div className="">
                     <div class="relative overflow-x-auto">
@@ -54,7 +54,7 @@ const MySelectedBKs = () => {
                                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                     {MyBk.ISBN_No}
                                                 </th>
-                                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                {/* <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                     {MyBk.Name}
                                                 </th>
                                                 <td class="px-6 py-4">
@@ -64,7 +64,7 @@ const MySelectedBKs = () => {
                                                     <p className="text-yellow-500 font-semibold">Seleted</p>
                                                 </td>
                                                 <td class="px-6 py-4">
-                                                </td>
+                                                </td> */}
                                             </tr>
                                         )
                                     })

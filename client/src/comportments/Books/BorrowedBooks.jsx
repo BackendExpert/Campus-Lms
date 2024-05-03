@@ -18,6 +18,19 @@ const BorrowedBooks = () => {
         .catch(err => console.log(err))
     }, [])
 
+    const headleReturn = () => {
+        axios.post('http://localhost:8081/ReturnBook/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Book Returned Successful")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
   return (
     <div className='bg-white py-4 px-8 my-8 rounded-2xl shadow-md'>
         <h1 className='text-gray-500 text-2xl font-semibold my-4'>All Borrowed Books</h1>
@@ -75,7 +88,7 @@ const BorrowedBooks = () => {
                                                 (() => {
                                                     if(books.status === "Borrow"){
                                                         return (
-                                                            <button className="py-2 px-8 text-blue-500 font-semibold shadow-md rounded duration-500 hover:bg-blue-500 hover:text-white">
+                                                            <button  onClick={() => headleReturn(books.ID)} className="py-2 px-8 text-blue-500 font-semibold shadow-md rounded duration-500 hover:bg-blue-500 hover:text-white">
                                                                 Return
                                                             </button>
                                                         )

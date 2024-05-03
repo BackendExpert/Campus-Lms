@@ -9,6 +9,7 @@ import AddBook from "../Books/AddBook"
 import SelectedBooks from "../Books/SelectedBooks"
 import Users from "../Users/Users"
 import BorrowedBooks from "../Books/BorrowedBooks"
+import MySelectedBKs from "../Profile/MySelectedBKs"
 
 const Dashboard = () => {
     const navigate = useNavigate() 
@@ -162,6 +163,11 @@ const Dashboard = () => {
                                 if(buttonValue === "Borrowed Books"){
                                     return (
                                         <BorrowedBooks />
+                                    )
+                                }
+                                if(buttonValue === "My Selected"){
+                                    return (
+                                        <MySelectedBKs />
                                     )
                                 }
 

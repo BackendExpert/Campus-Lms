@@ -12,10 +12,10 @@ const MySelectedBKs = () => {
     const EmailUser = secureLocalStorage.getItem("login2");
 
 
-    const [BKMySelected, SetMySelected] = useState([])
+    const [BKMySelected, BKSetMySelected] = useState([])
     useEffect(() => {
         axios.get('http://localhost:8081/MySelectedBooks/' + EmailUser)
-        .then(res => SetMySelected(res.data))
+        .then(res => BKSetMySelected(res.data))
         .catch(err => console.log(err))
     }, [])
     
@@ -54,7 +54,7 @@ const MySelectedBKs = () => {
                                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                     {MyBk.ISBN_No}
                                                 </th>
-                                                {/* <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                                     {MyBk.Name}
                                                 </th>
                                                 <td class="px-6 py-4">
@@ -64,7 +64,7 @@ const MySelectedBKs = () => {
                                                     <p className="text-yellow-500 font-semibold">Seleted</p>
                                                 </td>
                                                 <td class="px-6 py-4">
-                                                </td> */}
+                                                </td>
                                             </tr>
                                         )
                                     })

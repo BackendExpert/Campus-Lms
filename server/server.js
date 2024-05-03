@@ -463,7 +463,7 @@ app.get('/MySelectedBooks/:id', (req, res) => {
 })
 
 // SetAsSuperAdminUser
-app.post('/SetAsSuperAdminUser/:id', (res, req) => {
+app.post('/SetAsSuperAdminUser/:id', (req, res) => {
     const userID = req.params.id
     console.log(userID)
     // const sql = "UPDATE users SET role = ? WHERE ID = ?"

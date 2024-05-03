@@ -17,18 +17,7 @@ const AllBooks = () => {
         .catch(err => console.log(err))
     }, [])
 
-    const headleBorrow = (id) => {
-        axios.post('http://localhost:8081/BorrowBook/' + id)
-        .then(res => {
-            if(res.data.Status === "Success"){
-                alert("Book Borrow Successful")
-                window.location.reload()
-            }
-            else{
-                alert(res.data.Error)
-            }
-        })
-    }
+
 
     if(RoleUser === "SuperAdmin"){
         return (

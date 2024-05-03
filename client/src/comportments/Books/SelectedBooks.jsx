@@ -17,6 +17,19 @@ const SelectedBooks = () => {
         .catch(err => console.log(err))
     }, [])
 
+    const headleBorrow = (id) => {
+        axios.post('http://localhost:8081/BorrowBook/' + id)
+        .then(res => {
+            if(res.data.Status === "Success"){
+                alert("Book Borrow Successful")
+                window.location.reload()
+            }
+            else{
+                alert(res.data.Error)
+            }
+        })
+    }
+
   return (
     <div className='bg-white py-4 px-8 my-8 rounded-2xl shadow-md'>
         <h1 className='text-gray-500 text-2xl font-semibold my-4'>All Selected Books</h1>

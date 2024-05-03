@@ -29,16 +29,16 @@ const Users = () => {
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
                             <th scope="col" class="px-6 py-3">
-                                Book ISBN
+                                ID
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Books Name
+                                Username
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Authors
+                                Email
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Status
+                                Role
                             </th>
                             <th scope="col" class="px-6 py-3">
                                 Action

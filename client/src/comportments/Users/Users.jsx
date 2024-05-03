@@ -86,7 +86,7 @@ const Users = () => {
                                                             }
                                                             else if(users.role === "user"){
                                                                 return (
-                                                                    <button onClick={() => SetSuperAdmin(users.ID)} className="rounded font-semibold py-2 px-8 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-md">Set As SuperAdmin</button>
+                                                                    <button onClick={() => SetAsSuperAdmin(users.ID)} className="rounded font-semibold py-2 px-8 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-md">Set As SuperAdmin</button>
                                                                 )
                                                             }
                                                         })()

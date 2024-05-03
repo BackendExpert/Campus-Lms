@@ -60,7 +60,20 @@ const Users = () => {
                                             {users.email}
                                         </td>
                                         <td class="px-6 py-4">
-                                            {users.role}
+                                            {
+                                                (() => {
+                                                    if(users.role === "SuperAdmin"){
+                                                        return (
+                                                            <p className="text-red-500 font-semibold">SuperAdmin</p>
+                                                        )
+                                                    }
+                                                    else if(users.role === "user"){
+                                                        return (
+                                                            <p className="text-yellow-500 font-semibold">User</p>
+                                                        )
+                                                    }
+                                                })()
+                                            }
                                         </td>
                                     </tr>
                                 )

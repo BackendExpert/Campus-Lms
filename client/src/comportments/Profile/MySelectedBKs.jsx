@@ -52,18 +52,10 @@ const MySelectedBKs = () => {
                                         return (
                                             <tr key={index}>
                                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                    {MyBk.ISBN_No}
+                                                    hi all
                                                 </th>
-                                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                                    {MyBk.Name}
-                                                </th>
-                                                <td class="px-6 py-4">
-                                                    {MyBk.author1}, {MyBk.author2}, {MyBk.author3}
-                                                </td>
                                                 <td class="px-6 py-4">
                                                     <p className="text-yellow-500 font-semibold">Seleted</p>
-                                                </td>
-                                                <td class="px-6 py-4">
                                                 </td>
                                             </tr>
                                         )

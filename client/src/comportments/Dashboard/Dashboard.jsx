@@ -6,6 +6,7 @@ import SummaryDash from "./SummaryDash"
 import Books from "../Books/Books"
 import DashFooter from "./DashFooter"
 import AddBook from "../Books/AddBook"
+import SelectedBooks from "../Books/SelectedBooks"
 
 const Dashboard = () => {
     const navigate = useNavigate() 
@@ -142,11 +143,17 @@ const Dashboard = () => {
                                         <SummaryDash />
                                     )
                                 }
-                                else if(buttonValue === "Books"){
+                                if(buttonValue === "Books"){
                                     return (
                                         <Books />
                                     )
                                 }
+                                if(buttonValue === "Selected Books"){
+                                    return (
+                                        <SelectedBooks />
+                                    )
+                                }
+
                             })()
                         }
                         <DashFooter />

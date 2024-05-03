@@ -12,10 +12,10 @@ const MySelectedBKs = () => {
     const EmailUser = secureLocalStorage.getItem("login2");
 
 
-    const [MySelected, SetMySelected] = useState([])
+    const [BKMySelected, SetMySelected] = useState([])
     useEffect(() => {
         axios.get('http://localhost:8081/MySelectedBooks/' + EmailUser)
-        .then(res => SetAllUser(res.data))
+        .then(res => SetMySelected(res.data))
         .catch(err => console.log(err))
     }, [])
     
@@ -48,7 +48,7 @@ const MySelectedBKs = () => {
                             </thead>
                             <tbody>
                                 {
-                                    MySelected.map((MyBk, index) => {
+                                    BKMySelected.map((MyBk, index) => {
                                         return (
                                             <tr key={index}>
                                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">

@@ -76,6 +76,22 @@ const Users = () => {
                                                         })()
                                                     }
                                                 </td>
+                                                <td class="px-6 py-4">
+                                                    {
+                                                        (() => {
+                                                            if(users.role === "SuperAdmin"){
+                                                                return (
+                                                                    <p className="text-red-500 font-semibold"></p>
+                                                                )
+                                                            }
+                                                            else if(users.role === "user"){
+                                                                return (
+                                                                    <button onClick={() => SetSuperAdmin(users.ID)} className="rounded font-semibold py-2 px-8 text-red-500 duration-500 hover:bg-red-500 hover:text-white hover:shadow-md">Set As SuperAdmin</button>
+                                                                )
+                                                            }
+                                                        })()
+                                                    }
+                                                </td>
                                             </tr>
                                         )
                                     })

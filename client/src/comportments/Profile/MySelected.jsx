@@ -13,6 +13,11 @@ const MySelected = () => {
 
 
     const [MySelected, SetMySelected] = useState([])
+    useEffect(() => {
+        axios.get('http://localhost:8081/MySelectedBooks')
+        .then(res => SetAllUser(res.data))
+        .catch(err => console.log(err))
+    }, [])
     
   return (
     <div>MySelected</div>

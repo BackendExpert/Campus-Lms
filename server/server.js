@@ -430,16 +430,16 @@ app.get('/AllUsers', (req, res) => {
 // my selected books
 app.get('/MySelected/:id', (req, res) => {
     const userEmail = req.params.id
-    const sql = "SELECT COUNT(ID) AS allUsers FROM users";
+    const sql = "SELECT COUNT(ID) AS MySelectBK FROM books WHERE email = ?";
   
-    connection.query(sql, (error, results) => {
+    connection.query(sql, [userEmail], (error, results) => {
       if (error) {
         console.error('Error fetching data:', error);
         res.status(500).send({ message: 'Error fetching data' });
         return;
       }
   
-      res.json({ allUsers: results[0].allUsers }); // Send count in JSON format
+      res.json({ MySelectBK: results[0].MySelectBK }); // Send count in JSON format
     });
 })
 

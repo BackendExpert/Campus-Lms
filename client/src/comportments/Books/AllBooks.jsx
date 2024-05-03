@@ -87,7 +87,7 @@ const AllBooks = () => {
                                                         (() => {
                                                             if(books.status === "Borrow"){
                                                                 return (
-                                                                    <button onClick={() => headleBorrow(books.ID)} className="py-2 px-8 text-red-500 font-semibold shadow-md rounded duration-500 hover:bg-red-500 hover:text-white">
+                                                                    <button className="py-2 px-8 text-red-500 font-semibold shadow-md rounded duration-500 hover:bg-red-500 hover:text-white">
                                                                         Return
                                                                     </button>
                                                                 )

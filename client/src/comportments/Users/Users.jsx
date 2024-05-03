@@ -6,6 +6,11 @@ import CountUp from 'react-countup';
 import axios from "axios";
 
 const Users = () => {
+    const navigate = useNavigate() 
+    //curent login user
+    const RoleUser = secureLocalStorage.getItem("Login1");
+    const EmailUser = secureLocalStorage.getItem("login2");
+    
   return (
     <div>Users</div>
   )

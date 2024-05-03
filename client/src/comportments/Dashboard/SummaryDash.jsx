@@ -5,6 +5,7 @@ import  secureLocalStorage  from  "react-secure-storage"
 import CountUp from 'react-countup';
 import axios from "axios";
 import AllBooks from "../Books/AllBooks";
+import SelectedBooks from "../Books/SelectedBooks";
 
 const SummaryDash = () => {
     const navigate = useNavigate() 
@@ -75,7 +76,7 @@ const SummaryDash = () => {
         {id: 1, btnValue: "AllBooks", name: "Books", link: "#", value: <CountUp end={CountBooks}/>, icon: <Icons name="book" size="large"></Icons>, style: "text-purple-500"},
         {id: 2, btnValue: "", name: "Borrowed Books", link: "#", value: <CountUp end={CountBorrowBooks}/>, icon: <Icons name="book" size="large"></Icons>, style: "text-red-500"}, 
         {id: 3, btnValue: "", name: "My Borrowed", link: "#", value: <CountUp end={20}/>, icon: <Icons name="book" size="large"></Icons>, style: "text-green-500"},
-        {id: 4, btnValue: "", name: "Selected Books", link: "#", value: <CountUp end={CountSelectedBooks}/>, icon: <Icons name="book" size="large"></Icons>, style: "text-yellow-500"},
+        {id: 4, btnValue: "SelectBooks", name: "Selected Books", link: "#", value: <CountUp end={CountSelectedBooks}/>, icon: <Icons name="book" size="large"></Icons>, style: "text-yellow-500"},
         {id: 5, btnValue: "", name: "Users", link: "#", value: <CountUp end={CountUsers}/>, icon: <Icons name="people" size="large"></Icons>, style: "text-blue-500"}, 
                 
     ]
@@ -137,6 +138,11 @@ const SummaryDash = () => {
                         if(buttonValue === "AllBooks"){
                             return (
                                 <AllBooks />
+                            )
+                        }
+                        if(buttonValue === "SelectBooks"){
+                            return(
+                                <SelectedBooks />
                             )
                         }
                     })()

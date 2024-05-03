@@ -446,19 +446,19 @@ app.get('/MySelected/:id', (req, res) => {
 // all my selected books
 app.get('/MySelectedBooks/:id', (req, res) => {
     const userEmail = req.params.id
-    console.log(userEmail)
-    // const sql = "SELECT * FROM selectbook WHERE status = ? && selectEmail = ?"
-    // const status = "Selected"
+    // console.log(userEmail)
+    const sql = "SELECT * FROM selectbook WHERE status = ? && selectEmail = ?"
+    const status = "Selected"
 
-    // connection.query(sql, [userEmail, status], (err, result) => {
-    //     if(err) {
-    //         return res.json({Error: "Internal Server Error"})
-    //         // console.log(err)
-    //     }
-    //     else{
-    //         return res.json(result)
-    //     }
-    // })
+    connection.query(sql, [userEmail, status], (err, result) => {
+        if(err) {
+            return res.json({Error: "Internal Server Error"})
+            // console.log(err)
+        }
+        else{
+            return res.json(result)
+        }
+    })
 })
 
 // all end points end
